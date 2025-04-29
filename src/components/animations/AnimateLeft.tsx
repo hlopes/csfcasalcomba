@@ -1,18 +1,11 @@
+import { AnimationProps } from '@/types/AnimationProps'
 import { motion } from 'framer-motion'
-import { Transition } from 'motion-dom'
-import { ReactNode } from 'react'
 
-type AnimateTopProps = {
-  children: ReactNode
-  className?: string
-  transition?: Transition
-}
-
-export default function AnimateTop({
+export default function AnimateLeft({
   children,
   className,
   transition,
-}: AnimateTopProps) {
+}: AnimationProps) {
   return (
     <motion.div
       className={className}
@@ -21,11 +14,12 @@ export default function AnimateTop({
       variants={{
         hidden: {
           opacity: 0,
-          y: -20,
+          x: -20,
         },
+
         visible: {
           opacity: 1,
-          y: 0,
+          x: 0,
         },
       }}
       viewport={{ once: true }}

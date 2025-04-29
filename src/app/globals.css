@@ -54,6 +54,20 @@
     --text-regular: 16px, 26px;
 
     --container-c-1390: 86.875rem;
+
+    --animate-line1: line 3s linear infinite;
+    --animate-line2: line 6s linear infinite;
+    --animate-line3: line 9s linear infinite;
+
+    @keyframes line {
+        0%,
+        100% {
+            transform: translateY(100%);
+        }
+        50% {
+            transform: translateY(0);
+        }
+    }
 }
 
 :root {
