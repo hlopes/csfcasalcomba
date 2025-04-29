@@ -29,7 +29,11 @@ export default function Callout() {
             transition={{ delay: 0.9, duration: 0.5 }}
           >
             <div className="flex justify-end">
-              <ArrowLink href="/documentos" text="Tornar-se Sócio" />
+              <ArrowLink
+                href="/documentos"
+                text="Tornar-se Sócio"
+                variant="outline"
+              />
             </div>
           </AnimateRight>
         </div>
