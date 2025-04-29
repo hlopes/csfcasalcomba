@@ -1,5 +1,3 @@
-'use client'
-
 import AnimateLeft from '@/components/animations/AnimateLeft'
 import AnimateRight from '@/components/animations/AnimateRight'
 import SectionWrapper from '@/components/section-wrapper/SectionWrapper'

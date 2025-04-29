@@ -1,5 +1,3 @@
-'use client'
-
 import AnimateTop from '@/components/animations/AnimateTop'
 import Address from '@/components/footer/Address'
 import Contacts from '@/components/footer/Contacts'

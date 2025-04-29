@@ -14,7 +14,7 @@ export default function HeroPrimary() {
   }, [])
 
   return (
-    <SectionWrapper className="pt-0">
+    <SectionWrapper divClassName="px-0" sectionClassName="pt-0">
       <div className="relative aspect-8/10 w-full md:aspect-2/1">
         <video
           autoPlay

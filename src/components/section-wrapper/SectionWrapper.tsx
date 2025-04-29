@@ -1,19 +1,28 @@
+import { cn } from '@/lib/utils'
 import { ReactNode } from 'react'
 
 type SectionWrapperProps = {
   readonly children?: ReactNode
-  className?: string
+  divClassName?: string
+  sectionClassName?: string
 }
 
 export default function SectionWrapper({
   children,
-  className,
+  divClassName,
+  sectionClassName,
 }: SectionWrapperProps) {
-  const finalClassName = className ?? 'pt-15 md:pt-20 xl:pt-26'
+  const finalSectionClassName = sectionClassName ?? 'pt-15 md:pt-20 xl:pt-26'
+  const finalDivClassName = divClassName ?? 'px-4 md:px-8 2xl:px-0'
 
   return (
-    <section className={`overflow-hidden ${finalClassName}`}>
-      <div className="max-w-c-1390 mx-auto overflow-hidden px-4 md:px-8 2xl:px-0">
+    <section className={cn('overflow-hidden', finalSectionClassName)}>
+      <div
+        className={cn(
+          'max-w-c-1390 mx-auto overflow-hidden',
+          finalDivClassName
+        )}
+      >
         {children}
       </div>
     </section>

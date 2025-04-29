@@ -1,3 +1,5 @@
+'use client'
+
 import { AnimationProps } from '@/types/AnimationProps'
 import { motion } from 'framer-motion'
 
