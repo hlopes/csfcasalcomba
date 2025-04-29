@@ -44,12 +44,12 @@ export default function Features({ data }: FeaturesProps) {
               className="lg:w-1/2"
               transition={{ delay: 0.1, duration: 0.5 }}
             >
-              <h2 className="xl:text-hero text-primary relative mb-6 text-3xl font-bold uppercase">
+              <h2 className="text-primary relative mb-6 text-2xl uppercase">
                 {title}
               </h2>
               {content}
               <Link
-                className="group hover:text-primary dark:hover:text-primary mt-7.5 inline-flex items-center gap-2.5 text-black dark:text-white"
+                className="group hover:text-primary dark:hover:text-primary mt-8 inline-flex items-center gap-2 font-semibold dark:text-white"
                 href={href}
               >
                 <span className="duration-300 group-hover:pr-2">

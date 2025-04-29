@@ -9,12 +9,13 @@ export default function ThemeToggler() {
 
   return (
     <Button
+      className="absolute top-8 right-4 cursor-pointer xl:static"
       onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
       size="icon"
       variant="link"
     >
-      <Sun className="hidden h-[1.2rem] w-[1.2rem] dark:block" />
-      <Moon className="h-[1.2rem] w-[1.2rem] dark:hidden" />
+      <Sun className="hidden dark:block" />
+      <Moon className="dark:hidden" />
     </Button>
   )
 }
