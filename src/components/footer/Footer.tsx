@@ -4,10 +4,6 @@ import Address from '@/components/footer/Address'
 import AnimateTop from '@/components/footer/AnimateTop'
 import Contacts from '@/components/footer/Contacts'
 import Intro from '@/components/footer/Intro'
-import { Button } from '@/components/ui/button'
-import { Facebook, LucideFacebook, Mail, Phone } from 'lucide-react'
-import Image from 'next/image'
-import Link from 'next/link'
 
 export default function Footer() {
   return (
