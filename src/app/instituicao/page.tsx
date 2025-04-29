@@ -1,6 +1,9 @@
 import HeroSecondary from '@/components/hero/HeroSecondary'
 import SectionHeader from '@/components/section-header/SectionHeader'
 import SectionWrapper from '@/components/section-wrapper/SectionWrapper'
+import TextColumns from '@/components/text-columns/Text-Columns'
+import { data as valuesData } from '@/data/values-data'
+import { data as visionAndMissionData } from '@/data/vision-mission-data'
 
 export default function Home() {
   return (
@@ -17,6 +20,8 @@ export default function Home() {
           />
         </div>
       </SectionWrapper>
+      <TextColumns data={visionAndMissionData} />
+      <TextColumns data={valuesData} />
     </main>
   )
 }
