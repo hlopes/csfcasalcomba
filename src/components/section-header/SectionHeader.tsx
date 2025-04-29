@@ -10,15 +10,13 @@ export default function SectionHeader({
   title,
 }: SectionHeaderProps) {
   return (
-    <>
-      <AnimateTop transition={{ delay: 0.1, duration: 0.3 }}>
-        <div className="mx-auto max-w-120">
-          <h2 className="text-primary mx-auto mb-4 text-2xl uppercase">
-            {title}
-          </h2>
-          <p className="mx-auto">{description}</p>
-        </div>
-      </AnimateTop>
-    </>
+    <AnimateTop transition={{ delay: 0.1, duration: 0.3 }}>
+      <div className="mx-auto max-w-120 text-center">
+        <h2 className="text-primary mx-auto mb-4 text-2xl uppercase">
+          {title}
+        </h2>
+        <p className="mx-auto">{description}</p>
+      </div>
+    </AnimateTop>
   )
 }

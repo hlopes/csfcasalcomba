@@ -1,6 +1,6 @@
-import { TextColumn } from '@/types/TextColumn'
+import { TextContent } from '@/types/TextContent'
 
-export const data: TextColumn[] = [
+export const data: TextContent[] = [
   {
     description: `Pretende ser uma instituição reconhecida pela qualidade dos
       serviços de apoio social que presta, cuja atuação garanta a

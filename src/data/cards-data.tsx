@@ -1,6 +1,6 @@
 import { Card } from '@/types/Card'
 
-export const cardsData: Card[] = [
+export const data: Card[] = [
   {
     id: 1,
     mainImage: '/images/cards/organograma.svg',

@@ -9,7 +9,7 @@ export default function CardItem({ href, mainImage, metadata, title }: Card) {
       className="bg-background dark:bg-blacksection p-1"
       transition={{ delay: 0.5, duration: 0.5 }}
     >
-      <div className="flex h-full w-full items-center p-4 pb-8 shadow-sm">
+      <div className="shadow-solid-10 flex h-full w-full items-center p-4 pb-8">
         {href ? (
           <Link className="relative block h-26 w-26" href={href}>
             <Image alt={title} fill src={mainImage} />
