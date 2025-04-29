@@ -1,7 +1,11 @@
 'use client'
 
+import Address from '@/components/footer/Address'
 import AnimateTop from '@/components/footer/AnimateTop'
-import { Mail, Phone } from 'lucide-react'
+import Contacts from '@/components/footer/Contacts'
+import Intro from '@/components/footer/Intro'
+import { Button } from '@/components/ui/button'
+import { Facebook, LucideFacebook, Mail, Phone } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -15,86 +19,19 @@ export default function Footer() {
               className="mb-4 w-full lg:w-1/3"
               transition={{ delay: 0.2, duration: 0.5 }}
             >
-              <Link className="relative" href="/">
-                <Image
-                  alt="logo"
-                  height={80}
-                  src="/images/logo/logo.png"
-                  width={224}
-                />
-              </Link>
-              <p className="my-4">Uma instuição ao serviço da comunidade.</p>
-              <Link
-                className="flex items-center gap-2"
-                href="mailto:csfcasalcomba@gmail.com"
-              >
-                <Mail className="h-4 w-4" />
-                <span>csfcasalcomba@gmail.com</span>
-              </Link>
+              <Address />
             </AnimateTop>
             <AnimateTop
               className="w-full md:w-1/2 lg:w-1/3"
               transition={{ delay: 0.4, duration: 0.5 }}
             >
-              <ul className="mb-4 lg:pl-8">
-                <li>
-                  <h4 className="text-primary mb-2">Gabinete Técnico</h4>
-                </li>
-                <li className="flex items-center gap-2">
-                  <Phone className="h-4 w-4" />
-                  <Link href="tel:933573804">933 573 804</Link>
-                </li>
-                <li className="flex items-center gap-2">
-                  <Phone className="h-4 w-4" />
-                  <Link href="tel:231201400">231 201 400</Link>
-                </li>
-              </ul>
-              <ul className="mb-4 lg:pl-8">
-                <li>
-                  <h4 className="text-primary mb-2">CATL</h4>
-                </li>
-                <li className="flex items-center gap-2">
-                  <Phone className="h-4 w-4" />
-                  <Link href="tel:934580002">934 580 002</Link>
-                </li>
-              </ul>
-              <ul className="mb-4 lg:pl-8">
-                <li>
-                  <h4 className="text-itemtitle2 text-primary mb-2 font-medium">
-                    Creche
-                  </h4>
-                </li>
-                <li className="flex items-center gap-2">
-                  <Phone className="h-4 w-4" />
-                  <Link href="tel:933573804">933 573 804</Link>
-                </li>
-                <li className="flex items-center gap-2">
-                  <Phone className="h-4 w-4" />
-                  <Link href="tel:231201401">231 201 401</Link>
-                </li>
-              </ul>
+              <Contacts />
             </AnimateTop>
             <AnimateTop
               className="w-full md:w-1/2 lg:w-1/3"
               transition={{ delay: 0.6, duration: 0.5 }}
             >
-              <h4 className="text-primary mb-4">Onde Estamos</h4>
-              <address className="not-italic">
-                Centro Social da Freguesia de Casal Comba
-                <br />
-                Rua da Portela, nº16
-                <br />
-                3050-151 Casal Comba
-              </address>
-              <Link href="https://www.livroreclamacoes.pt/">
-                <Image
-                  alt="Livro de Reclamações"
-                  className="mt-12"
-                  height={34}
-                  src="/images/footer/reclamacoes.png"
-                  width={133}
-                />
-              </Link>
+              <Intro />
             </AnimateTop>
           </div>
           <AnimateTop
