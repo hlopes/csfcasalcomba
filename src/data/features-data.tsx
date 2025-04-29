@@ -14,7 +14,7 @@ export const featuresData: Feature[] = [
     ),
     href: '/infancia',
     id: 1,
-    image: '/images/features/creche.avif',
+    image: '/images/home/creche.avif',
     title: 'Creche',
   },
   {
@@ -27,14 +27,14 @@ export const featuresData: Feature[] = [
     ),
     href: '/area-senior',
     id: 2,
-    image: '/images/features/area-senior.avif',
+    image: '/images/home/area-senior.avif',
     title: 'Aceitamos Inscrições',
   },
   {
     content: <p>Inscrições e Renovações de Inscrição.</p>,
     href: '/infancia',
     id: 3,
-    image: '/images/features/catl.avif',
+    image: '/images/home/catl.avif',
     title: 'Centro de Atividades de Tempos Livres',
   },
 ]

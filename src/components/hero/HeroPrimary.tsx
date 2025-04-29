@@ -23,7 +23,7 @@ export default function HeroPrimary() {
           playsInline
           ref={videoRef}
         >
-          <source src="/videos/hero/file.mp4" type="video/mp4" />
+          <source src="/images/home/file.mp4" type="video/mp4" />
         </video>
         <HeroTitle highlight="Comunidade" text="Uma institução ao serviço da" />
       </div>
