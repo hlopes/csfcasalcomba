@@ -8,9 +8,10 @@ import { useState } from 'react'
 
 type MenuEntryProps = {
   menuEntry: MenuEntry
+  onCloseMenu: () => void
 }
 
-export default function MenuEntry({ menuEntry }: MenuEntryProps) {
+export default function MenuEntry({ menuEntry, onCloseMenu }: MenuEntryProps) {
   const pathUrl = usePathname()
   const [dropdownToggler, setDropdownToggler] = useState(false)
 
@@ -29,7 +30,11 @@ export default function MenuEntry({ menuEntry }: MenuEntryProps) {
           <ul className={`dropdown ${dropdownToggler ? 'flex' : ''}`}>
             {menuEntry.submenu.map((item) => (
               <li className="xl:text-right" key={item.id}>
-                <Link className="hover:text-primary" href={item.path ?? '#'}>
+                <Link
+                  className="hover:text-primary"
+                  href={item.path ?? '#'}
+                  onClick={onCloseMenu}
+                >
                   {item.title}
                 </Link>
               </li>
@@ -44,6 +49,7 @@ export default function MenuEntry({ menuEntry }: MenuEntryProps) {
               : 'hover:text-primary'
           }
           href={menuEntry.path ?? '#'}
+          onClick={onCloseMenu}
         >
           {menuEntry.title}
         </Link>

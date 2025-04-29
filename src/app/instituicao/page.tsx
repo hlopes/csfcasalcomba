@@ -1,7 +1,9 @@
+import Cards from '@/components/cards/Cards'
 import HeroSecondary from '@/components/hero/HeroSecondary'
 import SectionHeader from '@/components/section-header/SectionHeader'
 import SectionWrapper from '@/components/section-wrapper/SectionWrapper'
 import TextColumns from '@/components/text-columns/Text-Columns'
+import { cardsData } from '@/data/cards-data'
 import { data as valuesData } from '@/data/values-data'
 import { data as visionAndMissionData } from '@/data/vision-mission-data'
 
@@ -21,6 +23,7 @@ export default function Home() {
         </div>
       </SectionWrapper>
       <TextColumns data={visionAndMissionData} />
+      <Cards data={cardsData} />
       <TextColumns data={valuesData} />
     </main>
   )
