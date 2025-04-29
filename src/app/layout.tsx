@@ -1,12 +1,13 @@
 import type { Metadata } from 'next'
 
+import Footer from '@/components/footer/Footer'
 import Header from '@/components/header/Header'
 import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/next'
-import { ThemeProvider } from 'next-themes'
 
 import './globals.css'
 
+import { ThemeProvider } from 'next-themes'
 import { Inter } from 'next/font/google'
 import { ReactNode } from 'react'
 
@@ -33,6 +34,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
         >
           <Header />
           {children}
+          <Footer />
         </ThemeProvider>
         <Analytics />
         <SpeedInsights />
