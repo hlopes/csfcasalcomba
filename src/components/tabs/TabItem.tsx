@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 export default function TabItem({ children, image, title }: Tab) {
   return (
-    <div className="relative flex items-center gap-8 lg:gap-18">
+    <div className="relative flex items-center md:gap-8 lg:gap-18">
       <div className="absolute -top-16 -z-1 mx-auto h-[350px] w-[90%]">
         <Image
           alt="Dotted Shape"

@@ -7,16 +7,18 @@ import { menuData } from '@/data/menu-data'
 import { cn } from '@/lib/utils'
 import Image from 'next/image'
 import Link from 'next/link'
-import { useCallback, useEffect, useState } from 'react'
-import { useScrollLock } from 'usehooks-ts'
+import { useCallback, useEffect, useRef, useState } from 'react'
+import { useOnClickOutside, useScrollLock } from 'usehooks-ts'
 
 export default function Header() {
+  const containerRef = useRef(null)
+
+  const [navigationOpen, setNavigationOpen] = useState(false)
+
   const { lock, unlock } = useScrollLock({
     autoLock: false,
     lockTarget: '#scrollable',
   })
-
-  const [navigationOpen, setNavigationOpen] = useState(false)
 
   const toggleMenu = useCallback(() => {
     if (navigationOpen) {
@@ -33,6 +35,13 @@ export default function Header() {
     [setNavigationOpen]
   )
 
+  // @ts-expect-error it will never be null
+  useOnClickOutside(containerRef, () => {
+    if (containerRef.current) {
+      closeMenu()
+    }
+  })
+
   useEffect(() => {
     window.addEventListener('resize', () => closeMenu())
   }, [closeMenu])
@@ -40,9 +49,12 @@ export default function Header() {
   return (
     <>
       {navigationOpen && (
-        <div className="fixed top-0 left-0 z-30 min-h-full w-full bg-gray-950 opacity-80"></div>
+        <div className="fixed top-0 left-0 z-30 min-h-full w-full bg-black opacity-40"></div>
       )}
-      <header className="bg-background shadow-solid-1 fixed top-0 left-0 z-99999 w-full py-8 xl:shadow-none">
+      <header
+        className="bg-background fixed top-0 left-0 z-40 w-full py-8"
+        ref={containerRef}
+      >
         <div className="max-w-c-1390 relative mx-auto items-center justify-between px-4 md:px-8 xl:flex 2xl:px-0">
           <div className="flex w-full items-center justify-between xl:w-1/4">
             <Link href="/" onClick={closeMenu}>
