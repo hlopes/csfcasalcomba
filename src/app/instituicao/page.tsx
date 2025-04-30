@@ -4,10 +4,10 @@ import HeroSecondary from '@/components/hero/HeroSecondary'
 import SectionHeader from '@/components/section-header/SectionHeader'
 import SectionWrapper from '@/components/section-wrapper/SectionWrapper'
 import TextColumns from '@/components/text-columns/Text-Columns'
-import { data as boardsData } from '@/data/boards-data'
-import { data as cardsData } from '@/data/cards-data'
-import { data as valuesData } from '@/data/values-data'
-import { data as visionAndMissionData } from '@/data/vision-mission-data'
+import { data as boardsData } from '@/data/instituicao/boards-data'
+import { data as cardsData } from '@/data/instituicao/cards-data'
+import { data as valuesData } from '@/data/instituicao/values-data'
+import { data as visionAndMissionData } from '@/data/instituicao/vision-mission-data'
 
 export default function Instituicao() {
   return (

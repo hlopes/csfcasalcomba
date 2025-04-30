@@ -49,6 +49,7 @@
 
     --shadow-solid-5: 0px 8px 24px rgba(45, 74, 170, 0.08);
     --shadow-solid-6: 0px 8px 24px rgba(10, 16, 35, 0.08);
+    --shadow-solid-9: 0px 12px 30px rgba(45, 74, 170, 0.06);
     --shadow-solid-10: 0px 8px 30px rgba(45, 74, 170, 0.06);
     --shadow-solid-13: 0px 2px 19px rgba(0, 0, 0, 0.05);
 
@@ -108,7 +109,6 @@
     --black: #181c31;
     --blacksection: #222;
     --stroke: #eeeeee;
-
 }
 
 .dark {

@@ -2,9 +2,9 @@
 
 import AnimateTop from '@/components/animations/AnimateTop'
 import SectionWrapper from '@/components/section-wrapper/SectionWrapper'
+import TabItem from '@/components/tabs/TabItem'
 import { cn } from '@/lib/utils'
 import { Tab } from '@/types/Tab'
-import Image from 'next/image'
 import { useState } from 'react'
 
 type TabsProps = {
@@ -15,23 +15,9 @@ export default function Tabs({ data }: TabsProps) {
   const [currentTab, setCurrentTab] = useState(1)
 
   return (
-    <SectionWrapper>
-      <div className="absolute -top-16 -z-1 mx-auto h-[350px] w-[90%]">
-        <Image
-          alt="Dotted Shape"
-          className="dark:hidden"
-          fill
-          src="/images/shape/shape-dotted-light.svg"
-        />
-        <Image
-          alt="Dotted Shape"
-          className="hidden dark:block"
-          fill
-          src="/images/shape/shape-dotted-dark.svg"
-        />
-      </div>
+    <SectionWrapper sectionClassName="p-0">
       <AnimateTop
-        className="border-stroke shadow-solid-5 dark:bg-blacksection dark:shadow-solid-6 bg-background mb-14 flex flex-wrap justify-center border md:flex-nowrap md:items-center lg:gap-8 xl:mb-22 xl:gap-12"
+        className="border-stroke shadow-solid-5 dark:bg-blacksection dark:shadow-solid-6 bg-background -mx-8 mb-14 flex flex-wrap justify-center border md:flex-nowrap md:items-center lg:gap-8 xl:mb-22 xl:gap-12"
         transition={{ delay: 0.1, duration: 0.5 }}
       >
         {data.map(({ id, title }) => (
@@ -50,6 +36,19 @@ export default function Tabs({ data }: TabsProps) {
                 {title}
               </button>
             </div>
+          </div>
+        ))}
+      </AnimateTop>
+      <AnimateTop
+        className="max-w-c-1154 mx-auto"
+        transition={{ delay: 0.6, duration: 0.5 }}
+      >
+        {data.map((tab) => (
+          <div
+            className={tab.id === currentTab ? 'block' : 'hidden'}
+            key={tab.id}
+          >
+            <TabItem {...tab} />
           </div>
         ))}
       </AnimateTop>
