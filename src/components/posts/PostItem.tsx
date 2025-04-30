@@ -18,7 +18,7 @@ export default function PostItem({ description, icon, title, url }: Post) {
         />
       </div>
       <div className="p-4 xl:p-8">
-        <h3 className="my-8 text-xl font-semibold text-black dark:text-white">
+        <h3 className="text-hoverdark my-8 text-lg font-semibold dark:text-white">
           {title}
         </h3>
         <p className="text-justify">{description}</p>

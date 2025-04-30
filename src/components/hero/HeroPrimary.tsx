@@ -27,7 +27,7 @@ export default function HeroPrimary() {
         </video>
         <HeroTitle
           highlight="Comunidade"
-          text="Uma institução ao serviço da"
+          text="Uma instituição ao serviço da"
           to="to-cyan-500"
         />
       </div>

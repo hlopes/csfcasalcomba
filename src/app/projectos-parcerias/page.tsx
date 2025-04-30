@@ -11,7 +11,7 @@ export default function ProjectosParcerias() {
     <main>
       <HeroSecondary
         imageUrl="/images/projectos-parcerias/hero.avif"
-        title="Projectos e Parcerias"
+        title="Projetos e Parcerias"
       />
       <SectionWrapper>
         <SectionHeader

@@ -11,20 +11,20 @@ type AccordionProps = {
 }
 
 export default function Accordion({ data }: AccordionProps) {
-  const [activeFaq, setActiveFaq] = useState(1)
+  const [activeSection, setActiveSection] = useState(1)
 
-  const handleFaqToggle = (id: number) =>
-    setActiveFaq(activeFaq === id ? 0 : id)
+  const handleSectionToggle = (id: number) =>
+    setActiveSection(activeSection === id ? 0 : id)
 
   return (
     <SectionWrapper>
-      <AnimateRight transition={{ delay: 0.1, duration: 1 }}>
-        <div className="shadow-solid-8 dark:border-stroke dark:bg-blacksection bg-background dark:border">
+      <AnimateRight className="p-1" transition={{ delay: 0.1, duration: 1 }}>
+        <div className="dark:border-stroke dark:bg-blacksection shadow-solid-8 dark:border">
           {data.map((folder) => (
             <AccordionItem
-              activeFaq={activeFaq}
+              activeFaq={activeSection}
               folder={folder}
-              handleFaqToggle={handleFaqToggle}
+              handleSectionToggle={handleSectionToggle}
               key={folder.id}
             />
           ))}

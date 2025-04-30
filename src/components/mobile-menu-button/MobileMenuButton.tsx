@@ -3,18 +3,18 @@ import { cn } from '@/lib/utils'
 
 type MobileMenuButtonProps = {
   navigationOpen: boolean
-  setNavigationOpen: (open: boolean) => void
+  toggleMenu: () => void
 }
 
 export default function MobileMenuButton({
   navigationOpen,
-  setNavigationOpen,
+  toggleMenu,
 }: MobileMenuButtonProps) {
   return (
     <Button
       aria-label="hamburger Toggler"
       className="block xl:hidden"
-      onClick={() => setNavigationOpen(!navigationOpen)}
+      onClick={() => toggleMenu()}
       variant="link"
     >
       <span className="relative block h-5.5 w-5.5 cursor-pointer">

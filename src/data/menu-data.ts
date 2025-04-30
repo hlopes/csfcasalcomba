@@ -30,7 +30,7 @@ export const menuData: MenuEntry[] = [
     id: 3,
     newTab: false,
     path: '/projectos-parcerias',
-    title: 'Projectos e Parcerias',
+    title: 'Projetos e Parcerias',
   },
   {
     id: 4,

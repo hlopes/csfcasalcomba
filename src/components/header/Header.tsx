@@ -7,55 +7,80 @@ import { menuData } from '@/data/menu-data'
 import { cn } from '@/lib/utils'
 import Image from 'next/image'
 import Link from 'next/link'
-import { useCallback, useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
+import { useScrollLock } from 'usehooks-ts'
 
 export default function Header() {
+  const { lock, unlock } = useScrollLock({
+    autoLock: false,
+    lockTarget: '#scrollable',
+  })
+
   const [navigationOpen, setNavigationOpen] = useState(false)
+
+  const toggleMenu = useCallback(() => {
+    if (navigationOpen) {
+      unlock()
+    } else {
+      lock()
+    }
+
+    setNavigationOpen(!navigationOpen)
+  }, [lock, navigationOpen, unlock])
 
   const closeMenu = useCallback(
     () => setNavigationOpen(false),
     [setNavigationOpen]
   )
 
+  useEffect(() => {
+    window.addEventListener('resize', () => closeMenu())
+  }, [closeMenu])
+
   return (
-    <header className="bg-background fixed top-0 left-0 z-99999 w-full py-8">
-      <div className="max-w-c-1390 relative mx-auto items-center justify-between px-4 md:px-8 xl:flex 2xl:px-0">
-        <div className="flex w-full items-center justify-between xl:w-1/4">
-          <Link href="/" onClick={closeMenu}>
-            <Image
-              alt="logo"
-              className="w-full"
-              height={90}
-              priority
-              src="/images/logo/logo.png"
-              width={256}
-            />
-          </Link>
-          <MobileMenuButton
-            navigationOpen={navigationOpen}
-            setNavigationOpen={setNavigationOpen}
-          />
-        </div>
-        <div
-          className={cn(
-            'relative hidden h-0 w-full items-center justify-end gap-4 duration-0 xl:flex xl:h-auto xl:w-full',
-            navigationOpen && 'navbar block h-auto p-8 xl:h-auto xl:p-0'
-          )}
-        >
-          <ul className="flex flex-col gap-5 xl:flex-row xl:items-center xl:gap-10">
-            {menuData.map((menuItem) => (
-              <MenuEntry
-                key={menuItem.id}
-                menuEntry={menuItem}
-                onCloseMenu={closeMenu}
+    <>
+      {navigationOpen && (
+        <div className="fixed top-0 left-0 z-30 min-h-full w-full bg-gray-950 opacity-80"></div>
+      )}
+      <header className="bg-background shadow-solid-1 fixed top-0 left-0 z-99999 w-full py-8 xl:shadow-none">
+        <div className="max-w-c-1390 relative mx-auto items-center justify-between px-4 md:px-8 xl:flex 2xl:px-0">
+          <div className="flex w-full items-center justify-between xl:w-1/4">
+            <Link href="/" onClick={closeMenu}>
+              <Image
+                alt="logo"
+                className="w-full"
+                height={90}
+                priority
+                src="/images/logo/logo.png"
+                width={256}
               />
-            ))}
-          </ul>
-          <div className="flex items-center gap-6 xl:mt-0">
-            <ThemeToggler />
+            </Link>
+            <MobileMenuButton
+              navigationOpen={navigationOpen}
+              toggleMenu={toggleMenu}
+            />
+          </div>
+          <div
+            className={cn(
+              'relative hidden h-0 w-full items-center justify-end gap-4 duration-0 xl:flex xl:h-auto xl:w-full',
+              navigationOpen && 'navbar block h-auto p-8 xl:h-auto xl:p-0'
+            )}
+          >
+            <ul className="flex flex-col gap-5 xl:flex-row xl:items-center xl:gap-10">
+              {menuData.map((menuItem) => (
+                <MenuEntry
+                  key={menuItem.id}
+                  menuEntry={menuItem}
+                  onCloseMenu={closeMenu}
+                />
+              ))}
+            </ul>
+            <div className="flex items-center gap-6 xl:mt-0">
+              <ThemeToggler />
+            </div>
           </div>
         </div>
-      </div>
-    </header>
+      </header>
+    </>
   )
 }

@@ -26,7 +26,7 @@ type RootLayoutProps = {
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${comic.className} antialiased`}>
+      <body className={`${comic.className} antialiased`} id="scrollable">
         <ThemeProvider
           attribute="class"
           defaultTheme="light"

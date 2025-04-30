@@ -4,12 +4,12 @@ import { Folder } from '@/types/Folder'
 type AccordionItemProps = {
   activeFaq: number
   folder: Folder
-  handleFaqToggle: (id: number) => void
+  handleSectionToggle: (id: number) => void
 }
 export default function AccordionItem({
   activeFaq,
   folder,
-  handleFaqToggle,
+  handleSectionToggle,
 }: AccordionItemProps) {
   const { content, id, title } = folder
 
@@ -18,7 +18,7 @@ export default function AccordionItem({
       <button
         className="text-primary flex cursor-pointer items-center justify-between p-6 font-medium uppercase lg:px-10 lg:py-8"
         onClick={() => {
-          handleFaqToggle(id)
+          handleSectionToggle(id)
         }}
       >
         {title}
@@ -52,7 +52,7 @@ export default function AccordionItem({
       </button>
       <div
         className={cn(
-          'border-stroke border-t p-6 lg:px-10 lg:py-8',
+          'border-stroke border-t py-6 sm:px-6 lg:px-10 lg:py-8',
           activeFaq === id ? 'block' : 'hidden'
         )}
       >
