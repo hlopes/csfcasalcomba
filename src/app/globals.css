@@ -41,12 +41,16 @@
     --color-black: var(--black);
     --color-blacksection: var(--blacksection);
     --color-stroke: var(--stroke);
+    --color-hoverdark: var(--hoverdark);
+    --color-alabaster: var(--alabaster);
 
     --radius-sm: calc(var(--radius) - 4px);
     --radius-md: calc(var(--radius) - 2px);
     --radius-lg: var(--radius);
     --radius-xl: calc(var(--radius) + 4px);
 
+    --shadow-solid-3: 0px 6px 90px rgba(8, 14, 40, 0.04);
+    --shadow-solid-4: 0px 6px 90px rgba(8, 14, 40, 0.1);
     --shadow-solid-5: 0px 8px 24px rgba(45, 74, 170, 0.08);
     --shadow-solid-6: 0px 8px 24px rgba(10, 16, 35, 0.08);
     --shadow-solid-9: 0px 12px 30px rgba(45, 74, 170, 0.06);
@@ -109,10 +113,11 @@
     --black: #181c31;
     --blacksection: #222;
     --stroke: #eeeeee;
+    --hoverdark: #333;
+    --alabaster: #fbfbfb;
 }
 
 .dark {
-    /*--background: #181c31;*/
     --background: #121212;
     --foreground: #ccc;
     --card: oklch(0.205 0 0);

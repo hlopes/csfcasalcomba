@@ -4,7 +4,7 @@ import Tabs from '@/components/tabs/Tabs'
 import { images } from '@/data/infancia/images-data'
 import { data } from '@/data/infancia/tabs-data'
 
-export default function AreaSenior() {
+export default function Infancia() {
   return (
     <main>
       <HeroSecondary imageUrl="/images/infancia/hero.avif" title="Infância" />
