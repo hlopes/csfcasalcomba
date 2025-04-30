@@ -29,7 +29,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
       <body className={`${comic.className} antialiased`}>
         <ThemeProvider
           attribute="class"
-          defaultTheme="dark"
+          defaultTheme="light"
           disableTransitionOnChange
           enableSystem
         >

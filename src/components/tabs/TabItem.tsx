@@ -23,7 +23,7 @@ export default function TabItem({ children, image, title }: Tab) {
         {children}
       </div>
       <div className="relative mx-auto aspect-562/366 max-w-[550px] md:block md:w-1/2">
-        <Image alt={title} fill src={image} />
+        <Image alt={title} fill priority src={image} />
       </div>
     </div>
   )

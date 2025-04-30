@@ -26,6 +26,7 @@ export default function Header() {
               alt="logo"
               className="w-full"
               height={90}
+              priority
               src="/images/logo/logo.png"
               width={256}
             />
