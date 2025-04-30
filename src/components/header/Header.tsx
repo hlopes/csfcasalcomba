@@ -30,10 +30,10 @@ export default function Header() {
     setNavigationOpen(!navigationOpen)
   }, [lock, navigationOpen, unlock])
 
-  const closeMenu = useCallback(
-    () => setNavigationOpen(false),
-    [setNavigationOpen]
-  )
+  const closeMenu = useCallback(() => {
+    setNavigationOpen(false)
+    unlock()
+  }, [unlock, setNavigationOpen])
 
   // @ts-expect-error it will never be null
   useOnClickOutside(containerRef, () => {
