@@ -9,10 +9,10 @@ import './globals.css'
 
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import { ThemeProvider } from 'next-themes'
-import { Inter } from 'next/font/google'
+import { Comic_Neue } from 'next/font/google'
 import { ReactNode } from 'react'
 
-const inter = Inter({ subsets: ['latin'] })
+const comic = Comic_Neue({ subsets: ['latin'], weight: '400' })
 
 export const metadata: Metadata = {
   description: 'Ao serviço da comunidade',
@@ -26,7 +26,7 @@ type RootLayoutProps = {
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${inter.className} antialiased`}>
+      <body className={`${comic.className} antialiased`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"

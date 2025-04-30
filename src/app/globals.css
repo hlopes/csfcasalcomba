@@ -5,7 +5,7 @@
 
 @theme inline {
     --font-*: initial;
-    --font-inter: Inter, sans-serif;
+    --font-comic: Comic_Neue, sans-serif;
 
     --color-background: var(--background);
     --color-foreground: var(--foreground);
@@ -39,7 +39,6 @@
     --color-card-foreground: var(--card-foreground);
     --color-card: var(--card);
     --color-black: var(--black);
-    --color-blackho: var(--blackho);
     --color-blacksection: var(--blacksection);
     --color-stroke: var(--stroke);
 
@@ -49,8 +48,9 @@
     --radius-xl: calc(var(--radius) + 4px);
 
     --shadow-solid-5: 0px 8px 24px rgba(45, 74, 170, 0.08);
-    --shadow-solid-13: 0px 2px 19px rgba(0, 0, 0, 0.05);
+    --shadow-solid-6: 0px 8px 24px rgba(10, 16, 35, 0.08);
     --shadow-solid-10: 0px 8px 30px rgba(45, 74, 170, 0.06);
+    --shadow-solid-13: 0px 2px 19px rgba(0, 0, 0, 0.05);
 
     --text-regular: 16px, 26px;
 
@@ -106,20 +106,20 @@
     --sidebar-ring: oklch(0.708 0 0);
 
     --black: #181c31;
-    --blackho: #2c3149;
-    --blacksection: #1c2136;
+    --blacksection: #222;
     --stroke: #eeeeee;
 
 }
 
 .dark {
-    --background: #181c31;
-    --foreground: #999aa1;
+    /*--background: #181c31;*/
+    --background: #121212;
+    --foreground: #ccc;
     --card: oklch(0.205 0 0);
     --card-foreground: oklch(0.985 0 0);
     --popover: oklch(0.205 0 0);
     --popover-foreground: oklch(0.985 0 0);
-    --primary: #0891B2;
+    --primary: #09A2C3;
     --primary-foreground: oklch(0.205 0 0);
     --secondary: oklch(0.269 0 0);
     --secondary-foreground: oklch(0.985 0 0);
@@ -154,7 +154,7 @@
     }
 
     body {
-        @apply bg-background text-foreground relative z-1 font-inter text-regular font-normal;
+        @apply bg-background text-foreground relative z-1 text-regular font-normal;
     }
 }
 
@@ -167,7 +167,7 @@
 }
 
 @utility dropdown {
-    @apply pt-4 px-4 xl:px-0 xl:right-0 xl:pr-6 xl:pb-6 hidden min-w-max flex-col gap-4 bg-white duration-300 ease-in dark:bg-black xl:invisible xl:absolute
+    @apply pt-4 px-4 xl:px-0 xl:right-0 xl:pr-6 xl:pb-6 hidden min-w-max flex-col gap-4 bg-background duration-300 ease-in xl:invisible xl:absolute
     xl:mt-0 xl:flex xl:w-[250px] xl:translate-y-10 xl:opacity-0 xl:group-hover:visible xl:group-hover:translate-y-0
     xl:group-hover:opacity-100;
 }

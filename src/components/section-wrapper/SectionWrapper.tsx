@@ -19,7 +19,7 @@ export default function SectionWrapper({
     <section className={cn('overflow-hidden', finalSectionClassName)}>
       <div
         className={cn(
-          'max-w-c-1390 mx-auto overflow-hidden',
+          'max-w-c-1390 relative mx-auto overflow-hidden',
           finalDivClassName
         )}
       >

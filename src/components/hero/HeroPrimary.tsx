@@ -25,7 +25,11 @@ export default function HeroPrimary() {
         >
           <source src="/images/home/file.mp4" type="video/mp4" />
         </video>
-        <HeroTitle highlight="Comunidade" text="Uma institução ao serviço da" />
+        <HeroTitle
+          highlight="Comunidade"
+          text="Uma institução ao serviço da"
+          to="to-cyan-500"
+        />
       </div>
     </SectionWrapper>
   )

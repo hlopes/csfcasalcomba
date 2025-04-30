@@ -9,11 +9,11 @@ import { data as cardsData } from '@/data/cards-data'
 import { data as valuesData } from '@/data/values-data'
 import { data as visionAndMissionData } from '@/data/vision-mission-data'
 
-export default function Home() {
+export default function Instituicao() {
   return (
     <main>
       <HeroSecondary
-        imageUrl="/images/heros/hero-instituicao.avif"
+        imageUrl="/images/instituicao/hero.avif"
         title="A Instituição"
       />
       <SectionWrapper>
