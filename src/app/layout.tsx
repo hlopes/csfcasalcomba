@@ -3,10 +3,11 @@ import type { Metadata } from 'next'
 import Lines from '@/components/background-effects/Lines'
 import Footer from '@/components/footer/Footer'
 import Header from '@/components/header/Header'
-import { Analytics } from '@vercel/analytics/react'
+import ScrollToTop from '@/components/scroll-to-top/ScrollToTop'
 
 import './globals.css'
 
+import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import { ThemeProvider } from 'next-themes'
 import { Comic_Neue } from 'next/font/google'
@@ -37,6 +38,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
           <Header />
           {children}
           <Footer />
+          <ScrollToTop />
         </ThemeProvider>
         <Analytics />
         <SpeedInsights />

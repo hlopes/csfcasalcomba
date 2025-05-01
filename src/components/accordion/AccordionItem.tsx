@@ -2,12 +2,12 @@ import { cn } from '@/lib/utils'
 import { Folder } from '@/types/Folder'
 
 type AccordionItemProps = {
-  activeFaq: number
+  activeSection: number
   folder: Folder
   handleSectionToggle: (id: number) => void
 }
 export default function AccordionItem({
-  activeFaq,
+  activeSection,
   folder,
   handleSectionToggle,
 }: AccordionItemProps) {
@@ -22,7 +22,7 @@ export default function AccordionItem({
         }}
       >
         {title}
-        {activeFaq === id ? (
+        {activeSection === id ? (
           <svg
             fill="none"
             height="4"
@@ -53,7 +53,7 @@ export default function AccordionItem({
       <div
         className={cn(
           'border-stroke border-t py-6 sm:px-6 lg:px-10 lg:py-8',
-          activeFaq === id ? 'block' : 'hidden'
+          activeSection === id ? 'block' : 'hidden'
         )}
       >
         {content}

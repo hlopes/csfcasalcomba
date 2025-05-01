@@ -24,7 +24,7 @@ export default function Callout() {
           </AnimateLeft>
           <AnimateRight
             className="lg:w-[45%]"
-            transition={{ delay: 0.9, duration: 0.5 }}
+            transition={{ delay: 0.4, duration: 0.5 }}
           >
             <div className="flex justify-end">
               <ArrowLink

@@ -22,7 +22,7 @@ export default function Accordion({ data }: AccordionProps) {
         <div className="dark:border-stroke dark:bg-blacksection shadow-solid-8 dark:border">
           {data.map((folder) => (
             <AccordionItem
-              activeFaq={activeSection}
+              activeSection={activeSection}
               folder={folder}
               handleSectionToggle={handleSectionToggle}
               key={folder.id}

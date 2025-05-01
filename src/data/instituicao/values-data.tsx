@@ -4,24 +4,28 @@ export const data: TextContent = {
   description: (
     <ul className="space-y-8">
       <li>
-        <strong className="text-gray-600">Confiança:</strong> Acredita que a
-        honestidade é a base do bom funcionamento da instituição, visto que, é o
-        pilar que sustenta a relação entre a sua atuação e os elementos que dela
-        fazem parte.
+        <strong className="text-gray-600 dark:text-white">Confiança:</strong>{' '}
+        Acredita que a honestidade é a base do bom funcionamento da instituição,
+        visto que, é o pilar que sustenta a relação entre a sua atuação e os
+        elementos que dela fazem parte.
       </li>
       <li>
-        <strong className="text-gray-600">Solidariedade:</strong> Defende que o
-        espírito de entreajuda deve estar presente em toda e qualquer
-        intervenção da Instituição.
+        <strong className="text-gray-600 dark:text-white">
+          Solidariedade:
+        </strong>{' '}
+        Defende que o espírito de entreajuda deve estar presente em toda e
+        qualquer intervenção da Instituição.
       </li>
       <li>
-        <strong className="text-gray-600">Transparência/Probidade:</strong>{' '}
+        <strong className="text-gray-600 dark:text-white">
+          Transparência/Probidade:
+        </strong>{' '}
         Defende a existência de rigor e clareza em todos os procedimentos de
         gestão e ações desenvolvidas como uma base para o estabelecimento de uma
         relação de confiança entre os envolvidos.
       </li>
       <li>
-        <strong className="text-gray-600">
+        <strong className="text-gray-600 dark:text-white">
           Aprendizagem e Evolução Contínua:
         </strong>{' '}
         Sustenta que a sua atuação se deve pautar pela inovação e pela mudança,
@@ -31,14 +35,19 @@ export const data: TextContent = {
         contexto socioeconómico e político em constante mutação.
       </li>
       <li>
-        <strong className="text-gray-600">Profissionalismo:</strong> Acredita
-        que todos os colaboradores têm uma postura e agem com integridade e
-        honestidade, detêm competências específicas e desempenham as suas
-        funções de forma correta e responsável, de acordo com aquilo que é
-        melhor para o utente e para a Instituição, respondendo pelas suas ações.
+        <strong className="text-gray-600 dark:text-white">
+          Profissionalismo:
+        </strong>{' '}
+        Acredita que todos os colaboradores têm uma postura e agem com
+        integridade e honestidade, detêm competências específicas e desempenham
+        as suas funções de forma correta e responsável, de acordo com aquilo que
+        é melhor para o utente e para a Instituição, respondendo pelas suas
+        ações.
       </li>
       <li>
-        <strong className="text-gray-600">Orientação para o Utente:</strong>{' '}
+        <strong className="text-gray-600 dark:text-white">
+          Orientação para o Utente:
+        </strong>{' '}
         Todas as ações desenvolvidas e cuidados prestados são personalizados e
         têm sempre como prioridade o bem-estar da população-alvo,
         independentemente das suas características pessoais (idade, sexo,
@@ -48,7 +57,7 @@ export const data: TextContent = {
         promover o seu sentimento de pertença.
       </li>
       <li>
-        <strong className="text-gray-600">
+        <strong className="text-gray-600 dark:text-white">
           Respeito pela Individualidade, Dignidade e Autonomia:
         </strong>{' '}
         Compreende o ser humano como uma pessoa com personalidade e vivência
@@ -59,7 +68,7 @@ export const data: TextContent = {
         um.
       </li>
       <li>
-        <strong className="text-gray-600">
+        <strong className="text-gray-600 dark:text-white">
           Envolvimento e Participação da Comunidade:
         </strong>{' '}
         Acredita que a Instituição tem um papel fulcral em termos de

@@ -26,7 +26,7 @@ export const data: TextContent[] = [
         </li>
       </ul>
     ),
-    id: 1,
+    id: 0.1,
     title: 'Assembleia Geral',
   },
   {
@@ -49,7 +49,7 @@ export const data: TextContent[] = [
         </li>
       </ul>
     ),
-    id: 2,
+    id: 0.2,
     title: 'Direção',
   },
   {
@@ -82,7 +82,7 @@ export const data: TextContent[] = [
         </li>
       </ul>
     ),
-    id: 3,
+    id: 0.3,
     title: 'Conselho Fiscal',
   },
   {
@@ -98,7 +98,7 @@ export const data: TextContent[] = [
         <li className="dark:text-foreground mb-4">Manuel Nascimento Lopes</li>
       </ul>
     ),
-    id: 4,
+    id: 0.4,
     title: 'Suplentes',
   },
 ]

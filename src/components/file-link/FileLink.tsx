@@ -14,7 +14,7 @@ export default function FileLink({ href, title }: FileLinkProps) {
       target="_blank"
     >
       <File />
-      <span className="duration-300 group-hover:pr-2">{title}</span>
+      <span className="text-sm duration-300 group-hover:pr-2">{title}</span>
     </Link>
   )
 }
