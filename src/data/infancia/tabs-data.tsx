@@ -114,7 +114,7 @@ export const data: Tab[] = [
                   Documentos necessários para realização de inscrição:
                 </DialogDescription>
               </DialogHeader>
-              <ScrollArea className="h-[70vh] p-4">
+              <ScrollArea className="h-[70vh]">
                 <div>
                   <p className="py-4">
                     Vimos por este meio informar V. Ex.a, que se encontram
@@ -126,7 +126,7 @@ export const data: Tab[] = [
                     seu Educando, deverá entregar, até ao dia 30 de Junho, os
                     seguintes documentos:
                   </p>
-                  <ul>
+                  <ul className="nt">
                     <ListItem>
                       Fotocópia do Bilhete de Identidade, Cartão de Cidadão ou
                       Certidão de Nascimento da criança;
@@ -226,7 +226,7 @@ export const data: Tab[] = [
                   inscrição:
                 </DialogDescription>
               </DialogHeader>
-              <ScrollArea className="h-[70vh] p-4">
+              <ScrollArea className="h-[70vh]">
                 <div>
                   <p className="py-4">
                     Vimos por este meio informar V. Ex.a, que se encontram
@@ -289,7 +289,7 @@ export const data: Tab[] = [
                       (se aplicável).
                     </ListItem>
                   </ul>
-                  <p className="uppercase">Notas:</p>
+                  <p className="mt-4 font-semibold uppercase">Notas:</p>
                   <ul>
                     <ListItem>
                       Em caso de alteração ao nível dos documentos de
