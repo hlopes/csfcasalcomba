@@ -12,7 +12,7 @@ export const featuresData: Feature[] = [
         <li>Transporte</li>
       </ul>
     ),
-    href: '/infancia',
+    href: '/infancia?tab=1',
     id: 1,
     image: '/images/home/creche.avif',
     title: 'Creche',
@@ -32,7 +32,7 @@ export const featuresData: Feature[] = [
   },
   {
     content: <p>Inscrições e Renovações de Inscrição.</p>,
-    href: '/infancia',
+    href: '/infancia?tab=3',
     id: 3,
     image: '/images/home/catl.avif',
     title: 'Centro de Atividades de Tempos Livres',

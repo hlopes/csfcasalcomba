@@ -5,6 +5,7 @@ import SectionWrapper from '@/components/section-wrapper/SectionWrapper'
 import TabItem from '@/components/tabs/TabItem'
 import { cn } from '@/lib/utils'
 import { Tab } from '@/types/Tab'
+import { usePathname, useRouter, useSearchParams } from 'next/navigation'
 import { useState } from 'react'
 
 type TabsProps = {
@@ -12,7 +13,18 @@ type TabsProps = {
 }
 
 export default function Tabs({ data }: TabsProps) {
-  const [currentTab, setCurrentTab] = useState(1)
+  const router = useRouter()
+  const pathname = usePathname()
+  const searchParams = useSearchParams()
+
+  const [currentTab, setCurrentTab] = useState(
+    parseInt(searchParams.get('tab') ?? '1')
+  )
+
+  const handleTabClick = (id: number) => {
+    setCurrentTab(id)
+    router.push(`${pathname}?tab=${id}`)
+  }
 
   return (
     <SectionWrapper sectionClassName="p-0">
@@ -29,7 +41,7 @@ export default function Tabs({ data }: TabsProps) {
                 : ''
             )}
             key={id}
-            onClick={() => setCurrentTab(id)}
+            onClick={() => handleTabClick(id)}
           >
             <div className="md:w-3/5 lg:w-auto">
               <button className="xl:text-regular cursor-pointer text-sm font-medium dark:text-white">

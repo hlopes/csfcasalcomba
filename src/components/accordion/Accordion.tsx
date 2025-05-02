@@ -4,6 +4,7 @@ import AccordionItem from '@/components/accordion/AccordionItem'
 import AnimateRight from '@/components/animations/AnimateRight'
 import SectionWrapper from '@/components/section-wrapper/SectionWrapper'
 import { Folder } from '@/types/Folder'
+import { usePathname, useRouter, useSearchParams } from 'next/navigation'
 import { useState } from 'react'
 
 type AccordionProps = {
@@ -11,10 +12,18 @@ type AccordionProps = {
 }
 
 export default function Accordion({ data }: AccordionProps) {
-  const [activeSection, setActiveSection] = useState(1)
+  const router = useRouter()
+  const pathname = usePathname()
+  const searchParams = useSearchParams()
 
-  const handleSectionToggle = (id: number) =>
+  const [activeSection, setActiveSection] = useState(
+    parseInt(searchParams.get('section') ?? `${data[0].id}`)
+  )
+
+  const handleSectionToggle = (id: number) => {
     setActiveSection(activeSection === id ? 0 : id)
+    router.push(`${pathname}?section=${id}`)
+  }
 
   return (
     <SectionWrapper>

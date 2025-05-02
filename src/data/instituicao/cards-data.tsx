@@ -8,14 +8,14 @@ export const data: Card[] = [
     title: 'Organograma',
   },
   {
-    href: '/documentos',
+    href: '/documentos?section=2',
     id: 2,
     mainImage: '/images/cards/contas.svg',
     metadata: 'Relatório de Atividades e Contas.',
     title: 'Apresentação de Contas',
   },
   {
-    href: '/documentos',
+    href: '/documentos?section=1',
     id: 3,
     mainImage: '/images/cards/estatutos.svg',
     metadata: 'Estatutos da Associação.',
