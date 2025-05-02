@@ -29,7 +29,7 @@ export default function Tabs({ data }: TabsProps) {
   return (
     <SectionWrapper sectionClassName="p-0">
       <AnimateTop
-        className="border-stroke shadow-solid-5 dark:bg-blacksection dark:shadow-solid-6 bg-background -mx-8 mb-14 flex flex-wrap justify-center border md:flex-nowrap md:items-center lg:gap-8 xl:mb-22 xl:gap-12"
+        className="border-stroke shadow-solid-5 dark:bg-blacksection dark:shadow-solid-6 bg-background -mx-8 mb-14 flex flex-wrap justify-center border md:flex-nowrap md:items-baseline lg:gap-8 xl:mb-22 xl:gap-12"
         transition={{ delay: 0.1, duration: 0.5 }}
       >
         {data.map(({ id, title }) => (
@@ -43,7 +43,7 @@ export default function Tabs({ data }: TabsProps) {
             key={id}
             onClick={() => handleTabClick(id)}
           >
-            <div className="md:w-3/5 lg:w-auto">
+            <div className="md:w-auto">
               <button className="xl:text-regular cursor-pointer text-sm font-medium dark:text-white">
                 {title}
               </button>
