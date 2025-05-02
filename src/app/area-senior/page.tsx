@@ -3,6 +3,7 @@ import Slider from '@/components/slider/Slider'
 import Tabs from '@/components/tabs/Tabs'
 import { images } from '@/data/area-senior/images-data'
 import { data } from '@/data/area-senior/tabs-data'
+import { Suspense } from 'react'
 
 export default function AreaSenior() {
   return (
@@ -11,7 +12,9 @@ export default function AreaSenior() {
         imageUrl="/images/area-senior/hero.avif"
         title="Área Sénior"
       />
-      <Tabs data={data} />
+      <Suspense>
+        <Tabs data={data} />
+      </Suspense>
       <Slider images={images} />
     </main>
   )

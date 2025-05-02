@@ -3,6 +3,7 @@ import HeroSecondary from '@/components/hero/HeroSecondary'
 import SectionHeader from '@/components/section-header/SectionHeader'
 import SectionWrapper from '@/components/section-wrapper/SectionWrapper'
 import { data } from '@/data/documentos/docs-data'
+import { Suspense } from 'react'
 
 export default function Documentos() {
   return (
@@ -18,7 +19,9 @@ export default function Documentos() {
           title=""
         />
       </SectionWrapper>
-      <Accordion data={data} />
+      <Suspense>
+        <Accordion data={data} />
+      </Suspense>
     </main>
   )
 }
