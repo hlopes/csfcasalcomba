@@ -3,6 +3,12 @@
 import MenuEntry from '@/components/header/MenuEntry'
 import MobileMenuButton from '@/components/mobile-menu-button/MobileMenuButton'
 import ThemeToggler from '@/components/theme-toggler/ThemeToggler'
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from '@/components/ui/tooltip'
 import { menuData } from '@/data/menu-data'
 import { cn } from '@/lib/utils'
 import Image from 'next/image'
@@ -87,9 +93,18 @@ export default function Header() {
                 />
               ))}
             </ul>
-            <div className="flex items-center gap-6 xl:mt-0">
-              <ThemeToggler />
-            </div>
+            <TooltipProvider>
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <div className="flex items-center gap-6 xl:mt-0">
+                    <ThemeToggler />
+                  </div>
+                </TooltipTrigger>
+                <TooltipContent className="hidden xl:block">
+                  <p>Mudar tema</p>
+                </TooltipContent>
+              </Tooltip>
+            </TooltipProvider>
           </div>
         </div>
       </header>
