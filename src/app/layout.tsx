@@ -7,6 +7,7 @@ import ScrollToTop from '@/components/scroll-to-top/ScrollToTop'
 
 import './globals.css'
 
+import { Toaster } from '@/components/ui/sonner'
 import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import { ThemeProvider } from 'next-themes'
@@ -39,6 +40,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
           {children}
           <Footer />
           <ScrollToTop />
+          <Toaster richColors />
         </ThemeProvider>
         <Analytics />
         <SpeedInsights />

@@ -38,10 +38,10 @@ export const menuData: MenuEntry[] = [
     path: '/documentos',
     title: 'Documentos',
   },
-  // {
-  //   id: 5,
-  //   title: 'Contato',
-  //   newTab: false,
-  //   path: '/contato',
-  // },
+  {
+    id: 5,
+    newTab: false,
+    path: '/contato',
+    title: 'Contato',
+  },
 ]
