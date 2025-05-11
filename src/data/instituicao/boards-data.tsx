@@ -6,23 +6,19 @@ export const data: TextContent[] = [
       <ul className="text-gray-700">
         <li className="dark:text-foreground mb-4">
           <span className="font-semibold">Presidente:</span>
-          <br />
-          Augusto Gomes Simões Mamede
+          <p>Álvaro Ferreira Pires</p>
         </li>
         <li className="dark:text-foreground mb-4">
           <span className="font-semibold">Secretário:</span>
-          <br />
-          Álvaro Ferreira Pires
+          <p>Vítor José da Cunha Capela</p>
         </li>
         <li className="dark:text-foreground mb-4">
           <span className="font-semibold">Secretária:</span>
-          <br />
-          Maria Ângela Lopes da Cruz
+          <p>Licínia Maria da Silva Matos</p>
         </li>
         <li className="dark:text-foreground mb-4">
           <span className="font-semibold">Suplente:</span>
-          <br />
-          Mário Fernandes Oliveira
+          <p>Maria Adília Gomes Fernandes Alves</p>
         </li>
       </ul>
     ),
@@ -34,18 +30,29 @@ export const data: TextContent[] = [
       <ul className="text-gray-700">
         <li className="dark:text-foreground mb-4">
           <span className="font-semibold">Presidente:</span>
-          <br />
-          António Alves Silva Pires
+          <p>Manuel Lindo Cardoso</p>
         </li>
         <li className="dark:text-foreground mb-4">
-          <span className="font-semibold">Primeiro Secretário:</span>
-          <br />
-          Maria Isabel Silva C. Machado Costa
+          <span className="font-semibold">Vice-presidente:</span>
+          <p>Carlos Alberto Simões Godinho</p>
         </li>
         <li className="dark:text-foreground mb-4">
-          <span className="font-semibold">Segundo Secretário:</span>
-          <br />
-          Graciliano João Melo Ferreira
+          <span className="font-semibold">Secretário:</span>
+          <p>Luís Branco da Cruz</p>
+        </li>
+        <li className="dark:text-foreground mb-4">
+          <span className="font-semibold">Tesoureiro:</span>
+          <p>Marcolino Ferreira Lopes</p>
+        </li>
+        <li className="dark:text-foreground mb-4">
+          <span className="font-semibold">Vogal:</span>
+          <p>Nuno Filipe Santos Veiga</p>
+        </li>
+        <li className="dark:text-foreground mb-4">
+          <span className="font-semibold">Suplentes:</span>
+          <p>Hugo Daniel Ferreira Carvalho de Oliveira Rodrigues</p>
+          <p>Maria José Ferreira Gonçalves</p>
+          <p>Manuel Nascimento Lopes</p>
         </li>
       </ul>
     ),
@@ -57,48 +64,23 @@ export const data: TextContent[] = [
       <ul className="text-gray-700">
         <li className="dark:text-foreground mb-4">
           <span className="font-semibold">Presidente:</span>
-          <br />
-          Manuel Lindo Cardoso
+          <p>António Alves Sila Pires</p>
         </li>
         <li className="dark:text-foreground mb-4">
-          <span className="font-semibold">Vice-presidente:</span>
-          <br />
-          Carlos Alberto Simões Godinho
+          <span className="font-semibold">Primeiro Vogal:</span>
+          <p>Isabel Maria Cupido da Silva Machado Costa</p>
         </li>
         <li className="dark:text-foreground mb-4">
-          <span className="font-semibold">Secretário:</span>
-          <br />
-          Luís Branco da Cruz
+          <span className="font-semibold">Segundo Vogal:</span>
+          <p>Graciliano João Melo Ferreira</p>
         </li>
         <li className="dark:text-foreground mb-4">
-          <span className="font-semibold">Tesoureiro:</span>
-          <br />
-          Marcolino Ferreira Lopes
-        </li>
-        <li className="dark:text-foreground mb-4">
-          <span className="font-semibold">Vogal:</span>
-          <br />
-          Nuno Filipe Santos Veiga
+          <span className="font-semibold">Suplente:</span>
+          <p>Paulo Jorge Luzeiro Nogueira Gomes</p>
         </li>
       </ul>
     ),
     id: 0.3,
     title: 'Conselho Fiscal',
-  },
-  {
-    description: (
-      <ul className="text-gray-700">
-        <li className="dark:text-foreground mb-4">
-          Hugo Daniel Ferreira Carvalho de Oliveira Rodrigues
-        </li>
-        <li className="dark:text-foreground mb-4">
-          Maria José Ferreira Gonçalves
-        </li>
-        <li className="dark:text-foreground mb-4">Licínia Silva Matos</li>
-        <li className="dark:text-foreground mb-4">Manuel Nascimento Lopes</li>
-      </ul>
-    ),
-    id: 0.4,
-    title: 'Suplentes',
   },
 ]

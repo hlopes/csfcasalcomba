@@ -12,7 +12,7 @@ export default function Boards({ data }: BoardsProps) {
       <div className="flex flex-wrap justify-center gap-2 xl:flex-nowrap xl:gap-4">
         {data.map(({ description, id, title }) => (
           <AnimateTop
-            className="group border-stroke shadow-solid-10 dark:bg-blacksection bg-background relative w-full border p-8 sm:w-[45%] xl:w-1/4 xl:p-8 dark:shadow-none"
+            className="group border-stroke shadow-solid-10 dark:bg-blacksection bg-background relative w-full border p-8 sm:w-[45%] xl:w-1/3 xl:p-8 dark:shadow-none"
             key={id}
             transition={{ delay: id, duration: 0.5 }}
           >
