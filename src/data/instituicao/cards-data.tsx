@@ -2,9 +2,10 @@ import { Card } from '@/types/Card'
 
 export const data: Card[] = [
   {
+    href: '/organograma',
     id: 1,
     mainImage: '/images/cards/organograma.svg',
-    metadata: 'Brevemente.',
+    metadata: 'Estrutura hierárquica da organização',
     title: 'Organograma',
   },
   {
