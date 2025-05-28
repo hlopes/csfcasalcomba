@@ -23,7 +23,7 @@ export default function Tabs({ data }: TabsProps) {
 
   const handleTabClick = (id: number) => {
     setCurrentTab(id)
-    router.push(`${pathname}?tab=${id}`)
+    router.replace(`${pathname}?tab=${id}`, { scroll: false })
   }
 
   return (
