@@ -22,7 +22,7 @@ export default function Accordion({ data }: AccordionProps) {
 
   const handleSectionToggle = (id: number) => {
     setActiveSection(activeSection === id ? 0 : id)
-    router.push(`${pathname}?section=${id}`)
+    router.replace(`${pathname}?section=${id}`, { scroll: false })
   }
 
   return (
