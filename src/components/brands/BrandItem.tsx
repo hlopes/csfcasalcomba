@@ -1,9 +1,10 @@
 'use client'
 
-import { cn } from '@/lib/utils'
-import { Brand } from '@/types/Brand'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
+
+import { cn } from '@/lib/utils'
+import { Brand } from '@/types/Brand'
 
 export default function BrandItem({ className, href, id, image, name }: Brand) {
   const finalClassName = !className ? 'h-20 w-20' : className

@@ -1,7 +1,8 @@
+import Image from 'next/image'
+
 import AnimateTop from '@/components/animations/AnimateTop'
 import ArrowLink from '@/components/arrow-link/ArrowLink'
 import { Post } from '@/types/Post'
-import Image from 'next/image'
 
 export default function PostItem({ description, icon, title, url }: Post) {
   return (

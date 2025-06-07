@@ -1,5 +1,6 @@
-import { Image as ImageType } from '@/types/Image'
 import Image from 'next/image'
+
+import { Image as ImageType } from '@/types/Image'
 
 export default function Slide({ src }: ImageType) {
   return (

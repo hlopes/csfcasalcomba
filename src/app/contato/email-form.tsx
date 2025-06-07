@@ -1,9 +1,10 @@
 'use client'
 
+import { toast } from 'sonner'
+
 import AnimateTop from '@/components/animations/AnimateTop'
 import { Button } from '@/components/ui/button'
 import { sendEmail } from '@/lib/mail'
-import { toast } from 'sonner'
 
 export default function EmailForm() {
   async function send(formData: FormData) {

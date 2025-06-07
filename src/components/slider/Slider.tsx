@@ -3,12 +3,13 @@
 import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
+import { Autoplay, Pagination } from 'swiper/modules'
+import { Swiper, SwiperSlide } from 'swiper/react'
+
 import AnimateTop from '@/components/animations/AnimateTop'
 import SectionWrapper from '@/components/section-wrapper/SectionWrapper'
 import Slide from '@/components/slider/Slide'
 import { Image } from '@/types/Image'
-import { Autoplay, Pagination } from 'swiper/modules'
-import { Swiper, SwiperSlide } from 'swiper/react'
 
 type SwiperSlideProps = {
   images: Image[]
