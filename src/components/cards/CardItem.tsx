@@ -1,7 +1,8 @@
-import AnimateTop from '@/components/animations/AnimateTop'
-import { Card } from '@/types/Card'
 import Image from 'next/image'
 import Link from 'next/link'
+
+import AnimateTop from '@/components/animations/AnimateTop'
+import { Card } from '@/types/Card'
 
 export default function CardItem({ href, mainImage, metadata, title }: Card) {
   return (

@@ -1,5 +1,6 @@
-import { Tab } from '@/types/Tab'
 import Image from 'next/image'
+
+import { Tab } from '@/types/Tab'
 
 export default function TabItem({ children, image, title }: Tab) {
   return (

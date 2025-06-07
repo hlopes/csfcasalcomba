@@ -1,7 +1,8 @@
 'use client'
 
-import { AnimationProps } from '@/types/AnimationProps'
 import { motion } from 'framer-motion'
+
+import { AnimationProps } from '@/types/AnimationProps'
 
 export default function AnimateTop({
   children,

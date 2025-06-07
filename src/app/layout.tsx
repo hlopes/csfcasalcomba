@@ -1,18 +1,19 @@
 import type { Metadata } from 'next'
 
-import Lines from '@/components/background-effects/Lines'
-import Footer from '@/components/footer/Footer'
-import Header from '@/components/header/Header'
-import ScrollToTop from '@/components/scroll-to-top/ScrollToTop'
-
-import './globals.css'
-
-import { Toaster } from '@/components/ui/sonner'
 import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import { ThemeProvider } from 'next-themes'
 import { Comic_Neue } from 'next/font/google'
+
+import './globals.css'
+
 import { ReactNode } from 'react'
+
+import Lines from '@/components/background-effects/Lines'
+import Footer from '@/components/footer/Footer'
+import Header from '@/components/header/Header'
+import ScrollToTop from '@/components/scroll-to-top/ScrollToTop'
+import { Toaster } from '@/components/ui/sonner'
 
 const comic = Comic_Neue({ subsets: ['latin'], weight: '400' })
 

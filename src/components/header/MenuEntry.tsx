@@ -1,10 +1,11 @@
-import type { MenuEntry } from '@/types/MenuEntry'
-
-import { Button } from '@/components/ui/button'
 import { ChevronDown } from 'lucide-react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useState } from 'react'
+
+import type { MenuEntry } from '@/types/MenuEntry'
+
+import { Button } from '@/components/ui/button'
 
 type MenuEntryProps = {
   menuEntry: MenuEntry

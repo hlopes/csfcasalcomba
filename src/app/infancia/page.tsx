@@ -1,9 +1,10 @@
+import { Suspense } from 'react'
+
 import HeroSecondary from '@/components/hero/HeroSecondary'
 import Slider from '@/components/slider/Slider'
 import Tabs from '@/components/tabs/Tabs'
 import { images } from '@/data/infancia/images-data'
 import { data } from '@/data/infancia/tabs-data'
-import { Suspense } from 'react'
 
 export default function Infancia() {
   return (

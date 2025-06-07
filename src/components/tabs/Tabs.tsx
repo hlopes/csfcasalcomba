@@ -1,12 +1,13 @@
 'use client'
 
+import { usePathname, useRouter, useSearchParams } from 'next/navigation'
+import { useState } from 'react'
+
 import AnimateTop from '@/components/animations/AnimateTop'
 import SectionWrapper from '@/components/section-wrapper/SectionWrapper'
 import TabItem from '@/components/tabs/TabItem'
 import { cn } from '@/lib/utils'
 import { Tab } from '@/types/Tab'
-import { usePathname, useRouter, useSearchParams } from 'next/navigation'
-import { useState } from 'react'
 
 type TabsProps = {
   data: Tab[]
@@ -23,7 +24,7 @@ export default function Tabs({ data }: TabsProps) {
 
   const handleTabClick = (id: number) => {
     setCurrentTab(id)
-    router.push(`${pathname}?tab=${id}`)
+    router.replace(`${pathname}?tab=${id}`, { scroll: false })
   }
 
   return (
