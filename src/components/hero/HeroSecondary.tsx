@@ -1,5 +1,6 @@
-import HeroTitle from '@/components/hero/HeroTitle'
 import Image from 'next/image'
+
+import HeroTitle from '@/components/hero/HeroTitle'
 
 type HeroSecondaryProps = {
   imageUrl: string

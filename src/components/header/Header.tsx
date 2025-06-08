@@ -1,5 +1,10 @@
 'use client'
 
+import Image from 'next/image'
+import Link from 'next/link'
+import { useCallback, useEffect, useRef, useState } from 'react'
+import { useOnClickOutside, useScrollLock } from 'usehooks-ts'
+
 import MenuEntry from '@/components/header/MenuEntry'
 import MobileMenuButton from '@/components/mobile-menu-button/MobileMenuButton'
 import ThemeToggler from '@/components/theme-toggler/ThemeToggler'
@@ -11,10 +16,6 @@ import {
 } from '@/components/ui/tooltip'
 import { menuData } from '@/data/menu-data'
 import { cn } from '@/lib/utils'
-import Image from 'next/image'
-import Link from 'next/link'
-import { useCallback, useEffect, useRef, useState } from 'react'
-import { useOnClickOutside, useScrollLock } from 'usehooks-ts'
 
 export default function Header() {
   const containerRef = useRef(null)

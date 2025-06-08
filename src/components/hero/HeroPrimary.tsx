@@ -1,8 +1,9 @@
 'use client'
 
+import { useEffect, useRef } from 'react'
+
 import HeroTitle from '@/components/hero/HeroTitle'
 import SectionWrapper from '@/components/section-wrapper/SectionWrapper'
-import { useEffect, useRef } from 'react'
 
 export default function HeroPrimary() {
   const videoRef = useRef<HTMLVideoElement>(null)

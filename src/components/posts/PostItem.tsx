@@ -1,12 +1,13 @@
+import Image from 'next/image'
+
 import AnimateTop from '@/components/animations/AnimateTop'
 import ArrowLink from '@/components/arrow-link/ArrowLink'
 import { Post } from '@/types/Post'
-import Image from 'next/image'
 
 export default function PostItem({ description, icon, title, url }: Post) {
   return (
     <AnimateTop
-      className="group shadow-solid-3 hover:shadow-solid-4 dark:bg-blacksection bg-background dark:hover:bg-hoverdark z-40 cursor-pointer border-white transition-all"
+      className="group shadow-solid-3 hover:shadow-solid-4 dark:bg-blacksection bg-background dark:hover:bg-hoverdark z-40 border-white transition-all"
       transition={{ duration: 0.5 }}
     >
       <div className="relative mx-auto flex aspect-video items-center justify-center overflow-hidden">

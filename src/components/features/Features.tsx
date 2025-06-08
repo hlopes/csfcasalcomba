@@ -1,10 +1,11 @@
+import Image from 'next/image'
+import Link from 'next/link'
+
 import AnimateLeft from '@/components/animations/AnimateLeft'
 import AnimateRight from '@/components/animations/AnimateRight'
 import SectionWrapper from '@/components/section-wrapper/SectionWrapper'
 import { cn } from '@/lib/utils'
 import { Feature } from '@/types/Feature'
-import Image from 'next/image'
-import Link from 'next/link'
 
 type FeaturesProps = {
   data: Feature[]

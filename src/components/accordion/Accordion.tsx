@@ -1,11 +1,12 @@
 'use client'
 
+import { usePathname, useRouter, useSearchParams } from 'next/navigation'
+import { useState } from 'react'
+
 import AccordionItem from '@/components/accordion/AccordionItem'
 import AnimateRight from '@/components/animations/AnimateRight'
 import SectionWrapper from '@/components/section-wrapper/SectionWrapper'
 import { Folder } from '@/types/Folder'
-import { usePathname, useRouter, useSearchParams } from 'next/navigation'
-import { useState } from 'react'
 
 type AccordionProps = {
   data: Folder[]

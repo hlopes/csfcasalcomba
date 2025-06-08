@@ -1,9 +1,10 @@
+import { Suspense } from 'react'
+
 import Accordion from '@/components/accordion/Accordion'
 import HeroSecondary from '@/components/hero/HeroSecondary'
 import SectionHeader from '@/components/section-header/SectionHeader'
 import SectionWrapper from '@/components/section-wrapper/SectionWrapper'
 import { data } from '@/data/documentos/docs-data'
-import { Suspense } from 'react'
 
 export default function Documentos() {
   return (
