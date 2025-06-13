@@ -18,10 +18,18 @@ export default function Intro() {
         de Solidariedade Social.
       </p>
       <div className="mt-8 flex items-center justify-between">
-        <Link href="https://www.facebook.com/csfcasalcomba/">
+        <Link
+          href="https://www.facebook.com/csfcasalcomba/"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
           <Facebook className="text-primary h-10 w-6" />
         </Link>
-        <Link href="https://www.livroreclamacoes.pt/">
+        <Link
+          href="https://www.livroreclamacoes.pt/"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
           <Image
             alt="Livro de Reclamações"
             height={34}
