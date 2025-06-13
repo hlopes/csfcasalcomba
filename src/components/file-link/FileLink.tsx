@@ -11,6 +11,7 @@ export default function FileLink({ href, title }: FileLinkProps) {
     <Link
       className="group hover:text-primary dark:hover:text-primary ml-8 inline-flex items-center gap-2 dark:text-white"
       href={href}
+      rel="noopener noreferrer"
       target="_blank"
     >
       <File />

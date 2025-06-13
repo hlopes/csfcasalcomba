@@ -23,7 +23,12 @@ export default function PostItem({ description, icon, title, url }: Post) {
           {title}
         </h3>
         <p className="text-justify">{description}</p>
-        <ArrowLink href={url ?? '#'} text="Saber mais" />
+        <ArrowLink
+          href={url ?? '#'}
+          rel="noopener noreferrer"
+          target="_blank"
+          text="Saber mais"
+        />
       </div>
     </AnimateTop>
   )

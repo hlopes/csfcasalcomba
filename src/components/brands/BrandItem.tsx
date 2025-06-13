@@ -11,9 +11,11 @@ export default function BrandItem({ className, href, id, image, name }: Brand) {
 
   return (
     <motion.a
-      className={cn('mx-w-full relative block', finalClassName)}
+      className={cn('relative block max-w-full', finalClassName)}
       href={href}
       initial="hidden"
+      rel="noopener noreferrer"
+      target="_blank"
       transition={{ delay: id, duration: 1 }}
       variants={{
         hidden: {
