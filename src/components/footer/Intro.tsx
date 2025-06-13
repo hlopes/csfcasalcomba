@@ -1,4 +1,3 @@
-import { Facebook } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -19,11 +18,30 @@ export default function Intro() {
       </p>
       <div className="mt-8 flex items-center justify-between">
         <Link
+          className="dark:hidden"
           href="https://www.facebook.com/csfcasalcomba/"
           rel="noopener noreferrer"
           target="_blank"
         >
-          <Facebook className="text-primary h-10 w-6" />
+          <Image
+            alt="Facebook logo"
+            height={32}
+            src="/images/footer/facebook-primary.png"
+            width={32}
+          />
+        </Link>{' '}
+        <Link
+          className="hidden dark:block"
+          href="https://www.facebook.com/csfcasalcomba/"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <Image
+            alt="Facebook logo"
+            height={32}
+            src="/images/footer/facebook-secondary.png"
+            width={32}
+          />
         </Link>
         <Link
           href="https://www.livroreclamacoes.pt/"

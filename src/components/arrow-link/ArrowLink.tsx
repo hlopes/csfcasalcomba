@@ -1,9 +1,10 @@
 import Link from 'next/link'
+import { HTMLAttributeAnchorTarget } from 'react'
 
 type ArrowLinkProps = {
   href: string
   rel?: string
-  target?: string
+  target?: HTMLAttributeAnchorTarget
   text: string
   variant?: 'outline'
 }
@@ -15,12 +16,15 @@ export default function ArrowLink({
   text,
   variant,
 }: ArrowLinkProps) {
+  const computedRel =
+    rel ?? (target === '_blank' ? 'noopener noreferrer' : undefined)
+
   if (variant === 'outline') {
     return (
       <Link
         className="text-primary dark:bg-primary group bg-background inline-flex items-center gap-2 px-6 py-4 font-medium hover:opacity-90 dark:text-white"
         href={href}
-        rel={rel ?? (target === '_blank' ? 'noopener noreferrer' : undefined)}
+        rel={computedRel}
         target={target}
       >
         {text}
@@ -47,7 +51,7 @@ export default function ArrowLink({
     <Link
       className="group hover:text-primary dark:hover:text-primary mt-7.5 inline-flex items-center gap-2.5 text-black dark:text-white"
       href={href}
-      rel={rel ?? (target === '_blank' ? 'noopener noreferrer' : undefined)}
+      rel={computedRel}
       target={target}
     >
       <span className="duration-300 group-hover:pr-2">{text}</span>
