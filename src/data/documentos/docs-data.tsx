@@ -52,6 +52,12 @@ export const data: Folder[] = [
             title="Relatório de Atividades e Contas Ano 2023"
           />
         </li>
+        <li>
+          <FileLink
+            href="/docs/rac-2024.pdf"
+            title="Relatório de Atividades e Contas Ano 2024"
+          />
+        </li>
       </ul>
     ),
     id: 2,
