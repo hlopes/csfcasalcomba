@@ -10,10 +10,10 @@ const mailerSend = new MailerSend({
 const schema = z.object({
   email: z.string().email(),
   message: z.string({
-    invalid_type_error: 'Messagem inválida',
+    error: 'Messagem inválida',
   }),
   subject: z.string({
-    invalid_type_error: 'Assunto inválido',
+    error: 'Assunto inválido',
   }),
 })
 
