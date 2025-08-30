@@ -10,7 +10,8 @@ export default function EmailForm() {
   async function send(formData: FormData) {
     const result = await sendEmail(formData)
 
-    if (result?.errors) {
+    if (result?.error || result?.errors) {
+      console.error(result?.error)
       toast.error('Uh oh! Ocorreu um erro inesperado.')
 
       return
