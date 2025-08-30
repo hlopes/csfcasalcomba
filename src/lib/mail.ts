@@ -1,14 +1,14 @@
 'use server'
 
-import { EmailParams, MailerSend, Recipient, Sender } from 'mailersend'
+import { Resend } from 'resend'
 import { z } from 'zod'
 
-const mailerSend = new MailerSend({
-  apiKey: process.env.MAILERSEND_API_KEY!,
-})
+import MailTemplate from '@/components/mail-template/MailTemplate'
 
 const schema = z.object({
-  email: z.string().email(),
+  email: z.email({
+    error: 'Email inválido',
+  }),
   message: z.string({
     error: 'Messagem inválida',
   }),
@@ -31,23 +31,15 @@ export const sendEmail = async (formData: FormData) => {
     }
   }
 
-  const sentFrom = new Sender(
-    process.env.MAILERSEND_FROM!,
-    'Mensagem a partir do site www.csfcasalcomba.com'
-  )
+  const resend = new Resend(process.env.RESEND_API_KEY)
+  //
 
-  const replyTo = new Sender(validatedFields.data.email)
+  const { data, error } = await resend.emails.send({
+    from: 'www.csfcasalcomba.com <csfcasalcomba@resend.dev>',
+    react: MailTemplate({ content: validatedFields.data.message }),
+    subject: `${validatedFields.data.email} - ${validatedFields.data.subject}`,
+    to: [`${process.env.RESEND_TO}`],
+  })
 
-  const recipients = [new Recipient(process.env.MAILERSEND_TO!)]
-
-  const emailParams = new EmailParams()
-    .setFrom(sentFrom)
-    .setTo(recipients)
-    .setReplyTo(replyTo)
-    .setSubject(
-      `${validatedFields.data.email} - ${validatedFields.data.subject}`
-    )
-    .setText(validatedFields.data.message)
-
-  await mailerSend.email.send(emailParams)
+  return { data, error }
 }
