@@ -4,7 +4,6 @@ import { Container } from '@react-email/container'
 import { Heading } from '@react-email/heading'
 import { Hr } from '@react-email/hr'
 import { Html } from '@react-email/html'
-import { Row } from '@react-email/row'
 import { Section } from '@react-email/section'
 import { Text } from '@react-email/text'
 
@@ -18,14 +17,12 @@ const MailTemplate = ({ content, from }: MailTemplateProps) => {
     <Html lang="en">
       <Container style={container}>
         <Section style={track.container}>
-          <Row>
-            <Text style={global.paragraphWithBold}>
-              A partir do site www.csfcasalcomba.com
-            </Text>
-            <Text style={global.paragraphWithBold}>
-              Mensagem de: <Heading style={global.heading}> {from}</Heading>
-            </Text>
-          </Row>
+          <Text style={global.paragraphWithBold}>
+            A partir do site www.csfcasalcomba.com
+          </Text>
+          <Heading style={global.heading}>
+            Mensagem de: <a href={`mailto:${from}`}>{from}</a>
+          </Heading>
         </Section>
         <Hr style={global.hr} />
         <Section style={message}>
