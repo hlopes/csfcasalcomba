@@ -36,8 +36,11 @@ export const sendEmail = async (formData: FormData) => {
 
   const { data, error } = await resend.emails.send({
     from: 'www.csfcasalcomba.com <csfcasalcomba@resend.dev>',
-    react: MailTemplate({ content: validatedFields.data.message }),
-    subject: `${validatedFields.data.email} - ${validatedFields.data.subject}`,
+    react: MailTemplate({
+      content: validatedFields.data.message,
+      from: validatedFields.data.email,
+    }),
+    subject: validatedFields.data.subject,
     to: [`${process.env.RESEND_TO}`],
   })
 

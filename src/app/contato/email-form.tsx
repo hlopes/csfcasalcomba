@@ -58,7 +58,7 @@ export default function EmailForm() {
               className="focus:ring-primary-500 focus:border-primary-500 dark:focus:ring-primary-500 dark:focus:border-primary-500 block w-full border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 shadow-sm dark:border-gray-600 dark:bg-cyan-900 dark:text-white dark:placeholder-gray-400"
               id="message"
               name="message"
-              placeholder="Deixe o seu comentário..."
+              placeholder="Deixe o seu comentário ou questão"
               required
               rows={6}
             ></textarea>
