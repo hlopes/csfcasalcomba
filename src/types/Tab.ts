@@ -1,8 +1,12 @@
-import { ReactNode } from 'react'
-
 export type Tab = {
-  children: ReactNode
+  content: TabContent[]
   id: number
   image: string
+  isVisible?: boolean
+  title: string
+}
+
+export type TabContent = {
+  text: string
   title: string
 }

@@ -1,8 +1,5 @@
 'use client'
 
-import { usePathname, useRouter, useSearchParams } from 'next/navigation'
-import { useState } from 'react'
-
 import AnimateTop from '@/components/animations/AnimateTop'
 import SectionWrapper from '@/components/section-wrapper/SectionWrapper'
 import TabItem from '@/components/tabs/TabItem'
@@ -10,23 +7,12 @@ import { cn } from '@/lib/utils'
 import { Tab } from '@/types/Tab'
 
 type TabsProps = {
+  currentTab: number
   data: Tab[]
+  onTabChange: (id: number) => void
 }
 
-export default function Tabs({ data }: TabsProps) {
-  const router = useRouter()
-  const pathname = usePathname()
-  const searchParams = useSearchParams()
-
-  const [currentTab, setCurrentTab] = useState(
-    parseInt(searchParams.get('tab') ?? '1')
-  )
-
-  const handleTabClick = (id: number) => {
-    setCurrentTab(id)
-    router.replace(`${pathname}?tab=${id}`, { scroll: false })
-  }
-
+export default function Tabs({ currentTab, data, onTabChange }: TabsProps) {
   return (
     <SectionWrapper sectionClassName="p-0">
       <AnimateTop
@@ -42,7 +28,7 @@ export default function Tabs({ data }: TabsProps) {
                 : ''
             )}
             key={id}
-            onClick={() => handleTabClick(id)}
+            onClick={() => onTabChange(id)}
           >
             <div className="md:w-auto">
               <button className="xl:text-regular cursor-pointer text-sm font-medium dark:text-white">
@@ -57,12 +43,7 @@ export default function Tabs({ data }: TabsProps) {
         transition={{ delay: 0.6, duration: 0.5 }}
       >
         {data.map((tab) => (
-          <div
-            className={tab.id === currentTab ? 'block' : 'hidden'}
-            key={tab.id}
-          >
-            <TabItem {...tab} />
-          </div>
+          <TabItem isVisible={tab.id === currentTab} key={tab.id} {...tab} />
         ))}
       </AnimateTop>
     </SectionWrapper>
