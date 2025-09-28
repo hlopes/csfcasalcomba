@@ -6,11 +6,14 @@ export const data: Folder[] = [
     content: (
       <ul>
         <li>
-          <FileLink href="/docs/estatutos.pdf" title="Estatutos" />
+          <FileLink
+            href="https://drive.google.com/file/d/1D4ESMsv54UY8bOsXxNeyFFHZWPYqzy-k/view?usp=drive_link"
+            title="Estatutos"
+          />
         </li>
         <li>
           <FileLink
-            href="/docs/ficha-socio.pdf"
+            href="https://drive.google.com/file/d/1Mk-kNnRTyHFq9jaW1eBdkTfr-d5CtTRR/view?usp=drive_link"
             title="Ficha de Inscrição de Sócio"
           />
         </li>
@@ -24,37 +27,37 @@ export const data: Folder[] = [
       <ul>
         <li>
           <FileLink
-            href="/docs/cea-2021.pdf"
+            href="https://drive.google.com/file/d/1DcLbK1TpRkTYOzVc1QL6yTr2-bvUF76h/view?usp=drive_link"
             title="Contas do Exercício do Ano 2021"
           />
         </li>
         <li>
           <FileLink
-            href="/docs/rac-2020.pdf"
+            href="https://drive.google.com/file/d/1MHcvichKt_yy1pt3kecyOabGI2W6nfXD/view?usp=drive_link"
             title="Relatório de Atividades e Contas Ano 2020"
           />
         </li>
         <li>
           <FileLink
-            href="/docs/rac-2021.pdf"
+            href="https://drive.google.com/file/d/1LVIGKsAR4yG9w4SQNeUwE8JJkMONL0sk/view?usp=drive_link"
             title="Relatório de Atividades e Contas Ano 2021"
           />
         </li>
         <li>
           <FileLink
-            href="/docs/rac-2022.pdf"
+            href="https://drive.google.com/file/d/1WDzNIlOqjC2yLSInjxBjxA7ntVlsM-ed/view?usp=drive_link"
             title="Relatório de Atividades e Contas Ano 2022"
           />
         </li>
         <li>
           <FileLink
-            href="/docs/rac-2023.pdf"
+            href="https://drive.google.com/file/d/1nBL8yMDUDreBDbY7XTz6HSb_pvpP2GTX/view?usp=drive_link"
             title="Relatório de Atividades e Contas Ano 2023"
           />
         </li>
         <li>
           <FileLink
-            href="/docs/rac-2024.pdf"
+            href="https://drive.google.com/file/d/1n7BAzVLo_AaLyohUfi7oAMSs0QWf_oyf/view?usp=drive_link"
             title="Relatório de Atividades e Contas Ano 2024"
           />
         </li>
@@ -67,7 +70,10 @@ export const data: Folder[] = [
     content: (
       <ul>
         <li>
-          <FileLink href="/docs/projeto-sad.pdf" title="Projecto SAD" />
+          <FileLink
+            href="https://drive.google.com/file/d/1MAEhc7iAVEYMJ6l3DG0ninNRqJnRGQmg/view?usp=drive_link"
+            title="Projecto SAD"
+          />
         </li>
       </ul>
     ),
