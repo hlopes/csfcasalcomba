@@ -46,7 +46,10 @@ export const data: TextContent[] = [
         </li>
         <li className="dark:text-foreground mb-4">
           <span className="font-semibold">Vogal:</span>
-          <p>Nuno Filipe Santos Veiga</p>
+          <p>
+            Nuno Filipe Santos Veiga (pedido de suspensão do mandato a
+            28/10/2025)
+          </p>
         </li>
         <li className="dark:text-foreground mb-4">
           <span className="font-semibold">Suplentes:</span>
