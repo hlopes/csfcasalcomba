@@ -82,5 +82,5 @@ export const data: TextContent = {
     </ul>
   ),
   id: 1,
-  title: 'Values',
+  title: 'Valores',
 }
