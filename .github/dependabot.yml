@@ -1,25 +1,24 @@
 version: 2
 updates:
   # Enable version updates for npm
-  - package-ecosystem: "npm"
+  - package-ecosystem: 'npm'
     # Look for package files in the root directory
-    directory: "/"
+    directory: '/'
     # Check for updates once a week
     schedule:
-      interval: "weekly"
+      interval: 'weekly'
     # Specify labels for pull requests
     labels:
-      - "dependencies"
-      - "automerge"
+      - 'dependencies'
+      - 'automerge'
     # Limit the number of open pull requests for version updates
     open-pull-requests-limit: 10
     # Configure commit message format
     commit-message:
-      prefix: "chore"
-      include: "scope"
+      prefix: 'chore'
+      include: 'scope'
     # Group dependencies updates together
     groups:
       dependencies:
         patterns:
-          - "*"
-
+          - '*'

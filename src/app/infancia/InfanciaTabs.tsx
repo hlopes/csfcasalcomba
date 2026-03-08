@@ -7,6 +7,8 @@ import DocsDialogs from '@/app/infancia/DocsDialogs'
 import Tabs from '@/components/tabs/Tabs'
 import { data } from '@/data/infancia/tabs-data'
 
+const CATL_TAB_INDEX = 3
+
 export default function InfanciaTabs() {
   const router = useRouter()
   const pathname = usePathname()
@@ -24,7 +26,7 @@ export default function InfanciaTabs() {
   return (
     <>
       <Tabs currentTab={currentTab} data={data} onTabChange={handleTabChange} />
-      {currentTab === 3 && <DocsDialogs />}
+      {currentTab === CATL_TAB_INDEX && <DocsDialogs />}
     </>
   )
 }

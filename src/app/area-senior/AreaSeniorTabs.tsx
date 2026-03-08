@@ -21,10 +21,6 @@ export default function AreaSeniorTabs() {
   }
 
   return (
-    <Tabs
-      currentTab={currentTab}
-      data={data}
-      onTabChange={handleTabChange}
-    />
+    <Tabs currentTab={currentTab} data={data} onTabChange={handleTabChange} />
   )
 }

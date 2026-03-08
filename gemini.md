@@ -61,15 +61,15 @@ UI and Styling
 - Use Shadcn UI and Radix UI for component foundations.
 - Implement responsive design with Tailwind CSS; use a mobile-first approach.
 - Use Stylus as CSS Modules for component-specific styles:
-    - Create a .module.styl file for each component that needs custom styling.
-    - Use camelCase for class names in Stylus files.
-    - Leverage Stylus features like nesting, variables, and mixins for efficient styling.
+  - Create a .module.styl file for each component that needs custom styling.
+  - Use camelCase for class names in Stylus files.
+  - Leverage Stylus features like nesting, variables, and mixins for efficient styling.
 - Implement a consistent naming convention for CSS classes (e.g., BEM) within Stylus modules.
 - Use Tailwind for utility classes and rapid prototyping.
 - Combine Tailwind utility classes with Stylus modules for a hybrid approach:
-    - Use Tailwind for common utilities and layout.
-    - Use Stylus modules for complex, component-specific styles.
-    - Never use the @apply directive
+  - Use Tailwind for common utilities and layout.
+  - Use Stylus modules for complex, component-specific styles.
+  - Never use the @apply directive
 
 File Structure for Styling
 
@@ -151,12 +151,11 @@ Key Conventions
 - Use 'nuqs' for URL search parameter state management.
 - Optimize Web Vitals (LCP, CLS, FID).
 - Limit 'use client':
-    - Favor server components and Next.js SSR.
-    - Use only for Web API access in small components.
-    - Avoid for data fetching or state management.
+  - Favor server components and Next.js SSR.
+  - Use only for Web API access in small components.
+  - Avoid for data fetching or state management.
 - Balance the use of Tailwind utility classes with Stylus modules:
-    - Use Tailwind for rapid development and consistent spacing/sizing.
-    - Use Stylus modules for complex, unique component styles.
+  - Use Tailwind for rapid development and consistent spacing/sizing.
+  - Use Stylus modules for complex, unique component styles.
 
 Follow Next.js docs for Data Fetching, Rendering, and Routing.
-    

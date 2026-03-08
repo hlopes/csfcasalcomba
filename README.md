@@ -10,30 +10,30 @@ This website serves as the online presence for the "Centro Social e Paroquial de
 
 The website is organized into the following main sections:
 
-*   `/`: The homepage, featuring a brief introduction to the institution and its key services.
-*   `/instituicao`: Information about the institution's history, mission, and values.
-*   `/infancia`: Details about the services and programs available for children.
-*   `/area-senior`: Information on the services and support provided for seniors.
-*   `/documentos`: A collection of important institutional documents.
-*   `/organograma`: The organizational chart of the institution.
-*   `/projectos-parcerias`: Information about ongoing projects and partnerships.
-*   `/contato`: Contact information and a form to get in touch with the institution.
+- `/`: The homepage, featuring a brief introduction to the institution and its key services.
+- `/instituicao`: Information about the institution's history, mission, and values.
+- `/infancia`: Details about the services and programs available for children.
+- `/area-senior`: Information on the services and support provided for seniors.
+- `/documentos`: A collection of important institutional documents.
+- `/organograma`: The organizational chart of the institution.
+- `/projectos-parcerias`: Information about ongoing projects and partnerships.
+- `/contato`: Contact information and a form to get in touch with the institution.
 
 ## ✨ Features
 
-*   **Next.js 16**: The latest version of the popular React framework for server-side rendering, static site generation, and more.
-*   **TypeScript**: Strongly typed programming language that builds on JavaScript, giving you better tooling at any scale.
-*   **Tailwind CSS 4**: A utility-first CSS framework for rapid UI development.
-*   **Bun**: A fast all-in-one JavaScript runtime, bundler, and package manager.
-*   **ESLint and Prettier**: For consistent code style and quality.
-*   **Husky and commitlint**: To enforce conventional commit messages.
-*   **React Email and Resend**: For building and sending beautiful emails with React.
+- **Next.js 16**: The latest version of the popular React framework for server-side rendering, static site generation, and more.
+- **TypeScript**: Strongly typed programming language that builds on JavaScript, giving you better tooling at any scale.
+- **Tailwind CSS 4**: A utility-first CSS framework for rapid UI development.
+- **Bun**: A fast all-in-one JavaScript runtime, bundler, and package manager.
+- **ESLint and Prettier**: For consistent code style and quality.
+- **Husky and commitlint**: To enforce conventional commit messages.
+- **React Email and Resend**: For building and sending beautiful emails with React.
 
 ## 🚀 Getting Started
 
 ### Prerequisites
 
-*   [Bun](https://bun.sh/)
+- [Bun](https://bun.sh/)
 
 ### Installation and Development
 
@@ -70,12 +70,12 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## 🛠️ Available Scripts
 
-*   `bun run dev`: Starts the development server.
-*   `bun run build`: Builds the application for production.
-*   `bun run start`: Starts a production server.
-*   `bun run lint`: Lints the codebase for errors.
-*   `bun run format`: Formats the code with Prettier.
-*   `bun run email:dev`: Starts the React Email development server.
+- `bun run dev`: Starts the development server.
+- `bun run build`: Builds the application for production.
+- `bun run start`: Starts a production server.
+- `bun run lint`: Lints the codebase for errors.
+- `bun run format`: Formats the code with Prettier.
+- `bun run email:dev`: Starts the React Email development server.
 
 ## 📂 Project Structure
 
@@ -111,31 +111,31 @@ csfcasalcomba/
 
 This project utilizes the Next.js App Router, which enables a file-system-based routing mechanism and allows for the easy creation of layouts, pages, and components. The architecture is designed to be modular and scalable, with a clear separation of concerns.
 
-*   **`src/app`**: Contains all the routes and pages of the application.
-*   **`src/components`**: Home to all reusable components, categorized into `shared`, `ui`, `providers`, and `mail-template`.
-*   **`src/lib`**: Includes utility functions, API clients, and other library code.
+- **`src/app`**: Contains all the routes and pages of the application.
+- **`src/components`**: Home to all reusable components, categorized into `shared`, `ui`, `providers`, and `mail-template`.
+- **`src/lib`**: Includes utility functions, API clients, and other library code.
 
 ## 🎨 Styling
 
 Styling is handled with Tailwind CSS, a utility-first CSS framework. We use `clsx` to conditionally apply classes and `tailwind-merge` to resolve conflicting classes.
 
-*   **`tailwind.config.js`**: The configuration file for Tailwind CSS.
-*   **`postcss.config.mjs`**: The configuration file for PostCSS.
-*   **`src/styles/globals.css`**: Global styles and Tailwind CSS directives.
+- **`tailwind.config.js`**: The configuration file for Tailwind CSS.
+- **`postcss.config.mjs`**: The configuration file for PostCSS.
+- **`src/styles/globals.css`**: Global styles and Tailwind CSS directives.
 
 ## 📧 Email
 
 This project uses React Email to build and style emails with React components, and Resend to send them.
 
-*   **`src/components/mail-template`**: Contains all the email templates.
-*   **`bun run email:dev`**: Starts a development server at [http://localhost:4000](http://localhost:4000) to preview your email templates.
+- **`src/components/mail-template`**: Contains all the email templates.
+- **`bun run email:dev`**: Starts a development server at [http://localhost:4000](http://localhost:4000) to preview your email templates.
 
 ## 🎨 Linting and Formatting
 
 This project uses ESLint and Prettier to maintain code quality and consistency.
 
-*   **ESLint**: Checks for code quality and style issues. The configuration is in `eslint.config.mjs`.
-*   **Prettier**: An opinionated code formatter. The configuration is in `prettier.config.js`.
+- **ESLint**: Checks for code quality and style issues. The configuration is in `eslint.config.mjs`.
+- **Prettier**: An opinionated code formatter. The configuration is in `prettier.config.js`.
 
 We recommend installing the [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) and [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) extensions for your code editor.
 
