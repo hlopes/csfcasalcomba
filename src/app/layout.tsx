@@ -15,6 +15,8 @@ import Header from '@/components/header/Header'
 import ScrollToTop from '@/components/scroll-to-top/ScrollToTop'
 import { Toaster } from '@/components/ui/sonner'
 
+import IRSDialog from './IRSDialog'
+
 const comic = Comic_Neue({ subsets: ['latin'], weight: '400' })
 
 export const metadata: Metadata = {
@@ -41,6 +43,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
           {children}
           <Footer />
           <ScrollToTop />
+          <IRSDialog />
           <Toaster richColors />
         </ThemeProvider>
         <Analytics />

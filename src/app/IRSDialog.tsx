@@ -16,7 +16,7 @@ export default function DocsDialogs() {
     <SectionWrapper sectionClassName="p-0">
       <div className="flex flex-col justify-between gap-4 py-8 md:flex-row">
         <Dialog defaultOpen>
-          <DialogContent className="max-h-[760px] rounded-xl p-0 xl:max-w-[1200px]">
+          <DialogContent className="max-h-190 rounded-xl p-0 xl:max-w-300">
             <ScrollArea className="h-full">
               <div className="flex w-full flex-col overflow-hidden rounded-xl xl:flex-row">
                 <div className="flex w-full flex-col xl:w-3/4">
@@ -39,8 +39,8 @@ export default function DocsDialogs() {
                       fará toda a diferença para a nossa Instituição.
                     </p>
                   </div>
-                  <div className="relative min-h-[280px] flex-1">
-                    <div className="absolute inset-0 z-10 bg-gradient-to-b from-black/20 to-black/50"></div>
+                  <div className="relative min-h-70 flex-1">
+                    <div className="absolute inset-0 z-10 bg-linear-to-b from-black/20 to-black/50"></div>
                     <div
                       className="absolute inset-0 bg-cover bg-center"
                       style={{
