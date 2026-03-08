@@ -65,7 +65,7 @@ export default function DocsDialogs() {
                       className="h-auto w-full object-contain"
                     />
                   </div>
-                  <Separator />
+                  <Separator className="hidden xl:block" />
                   <p className="fade-in text-primary py-11 text-center text-xl leading-relaxed font-semibold delay-5">
                     No quadro 11 do Modelo 3 da declaração de IRS, selecione a
                     opção para consignar o IRS
