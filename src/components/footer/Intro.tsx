@@ -9,6 +9,7 @@ export default function Intro() {
           alt="logo"
           height={64}
           src="/images/logo/logo-small.png"
+          style={{ height: 'auto' }}
           width={64}
         />
       </Link>

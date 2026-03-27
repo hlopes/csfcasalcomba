@@ -30,12 +30,14 @@ export default function Features({ data }: FeaturesProps) {
                   className="dark:hidden"
                   fill
                   src="/images/shape/shape-dotted-light.svg"
+                  sizes="(max-width: 1024px) 1px, (max-width: 1390px) 90vw, 1251px"
                 />
                 <Image
                   alt="Dotted Shape"
                   className="hidden dark:block"
                   fill
                   src="/images/shape/shape-dotted-dark.svg"
+                  sizes="(max-width: 1024px) 1px, (max-width: 1390px) 90vw, 1251px"
                 />
               </div>
             )}
@@ -68,7 +70,12 @@ export default function Features({ data }: FeaturesProps) {
               className="relative mx-auto aspect-[734/460] w-full lg:w-1/2"
               transition={{ delay: 0.1, duration: 0.5 }}
             >
-              <Image alt={title} fill src={image} />
+              <Image
+                alt={title}
+                fill
+                src={image}
+                sizes="(max-width: 1024px) 100vw, (max-width: 1390px) 50vw, 695px"
+              />
             </AnimateLeft>
           </div>
         ))}
