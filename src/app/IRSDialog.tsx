@@ -11,7 +11,7 @@ import {
 import { ScrollArea } from '@/components/ui/scroll-area'
 import { Separator } from '@/components/ui/separator'
 
-export default function DocsDialogs() {
+export default function IRSDialog() {
   return (
     <SectionWrapper sectionClassName="p-0">
       <div className="flex flex-col justify-between gap-4 py-8 md:flex-row">
