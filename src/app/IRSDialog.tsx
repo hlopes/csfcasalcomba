@@ -16,7 +16,7 @@ export default function IRSDialog() {
     <SectionWrapper sectionClassName="p-0">
       <div className="flex flex-col justify-between gap-4 py-8 md:flex-row">
         <Dialog defaultOpen>
-          <DialogContent className="[&_svg]:stroke-white xl:[&_svg]:stroke-primary h-auto max-h-[90dvh] rounded-xl p-0 xl:max-h-[760px] xl:max-w-[1200px]">
+          <DialogContent className="xl:[&_svg]:stroke-primary h-auto max-h-[90dvh] rounded-xl p-0 xl:max-h-[760px] xl:max-w-[1200px] [&_svg]:stroke-white">
             <DialogHeader className="sr-only">
               <DialogTitle>Consigne 1% do seu IRS</DialogTitle>
               <DialogDescription>
