@@ -67,8 +67,8 @@ export default function Header() {
             <Link href="/" onClick={closeMenu}>
               <Image
                 alt="logo"
-                className="w-full"
-                height={90}
+                className="h-auto w-full"
+                height={91}
                 priority
                 src="/images/logo/logo.png"
                 width={256}

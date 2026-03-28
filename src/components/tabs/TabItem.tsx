@@ -42,7 +42,7 @@ export default function TabItem({
         </ul>
       </div>
       <div className="relative mx-auto aspect-562/366 max-w-[550px] md:block md:w-1/2">
-        <Image alt={title} fill priority src={image} />
+        <Image alt={title} fill priority src={image} sizes="(max-width: 1024px) 100vw" />
       </div>
     </div>
   )

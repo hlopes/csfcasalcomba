@@ -7,8 +7,9 @@ export default function Intro() {
       <Link className="relative" href="/">
         <Image
           alt="logo"
-          height={64}
+          height={81}
           src="/images/logo/logo-small.png"
+          className="h-auto"
           width={64}
         />
       </Link>

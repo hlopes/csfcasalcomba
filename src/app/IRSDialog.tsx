@@ -11,12 +11,19 @@ import {
 import { ScrollArea } from '@/components/ui/scroll-area'
 import { Separator } from '@/components/ui/separator'
 
-export default function DocsDialogs() {
+export default function IRSDialog() {
   return (
     <SectionWrapper sectionClassName="p-0">
       <div className="flex flex-col justify-between gap-4 py-8 md:flex-row">
         <Dialog defaultOpen>
-          <DialogContent className="max-h-190 rounded-xl p-0 xl:max-w-300">
+          <DialogContent className="xl:[&_svg]:stroke-primary h-auto max-h-[90dvh] rounded-xl p-0 xl:max-h-[760px] xl:max-w-[1200px] [&_svg]:stroke-white">
+            <DialogHeader className="sr-only">
+              <DialogTitle>Consigne 1% do seu IRS</DialogTitle>
+              <DialogDescription>
+                Seja solidário e consigne 1% do seu IRS ao Centro Social da
+                Freguesia de Casal Comba. NIF: 503 247 367.
+              </DialogDescription>
+            </DialogHeader>
             <ScrollArea className="h-full">
               <div className="flex w-full flex-col overflow-hidden rounded-xl xl:flex-row">
                 <div className="flex w-full flex-col xl:w-3/4">

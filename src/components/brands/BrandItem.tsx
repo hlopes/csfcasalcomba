@@ -35,6 +35,7 @@ export default function BrandItem({ className, href, id, image, name }: Brand) {
         className="opacity-65 transition-all duration-300 hover:opacity-100"
         fill
         src={image}
+        sizes="(max-width: 1024px) 100vw"
       />
     </motion.a>
   )
