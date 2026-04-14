@@ -61,6 +61,12 @@ export const data: Folder[] = [
             title="Relatório de Atividades e Contas Ano 2024"
           />
         </li>
+        <li>
+          <FileLink
+            href="https://drive.google.com/file/d/1jNTuqrExgqBgPuSmXyAeMjU0zDKiz3n3/view?usp=sharing"
+            title="Relatório de Atividades e Contas Ano 2025"
+          />
+        </li>
       </ul>
     ),
     id: 2,
