@@ -1,11 +1,6 @@
 import type { CSSProperties } from 'react'
 
-import { Container } from '@react-email/container'
-import { Heading } from '@react-email/heading'
-import { Hr } from '@react-email/hr'
-import { Html } from '@react-email/html'
-import { Section } from '@react-email/section'
-import { Text } from '@react-email/text'
+import { Container, Heading, Hr, Html, Section, Text } from 'react-email'
 
 type MailTemplateProps = {
   content: string
