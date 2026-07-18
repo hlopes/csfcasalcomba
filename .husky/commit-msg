@@ -1,1 +1,9 @@
-bunx --no -- commitlint --edit ${1}
+# Ensure a Node.js runtime is on PATH (e.g. when Git is launched from a
+# Windows client and the shell's version manager hasn't been initialised).
+if ! command -v node >/dev/null 2>&1; then
+  [ -d "$HOME/.asdf/shims" ] && PATH="$HOME/.asdf/shims:$PATH"
+  [ -s "$HOME/.nvm/nvm.sh" ] && . "$HOME/.nvm/nvm.sh" >/dev/null 2>&1
+  export PATH
+fi
+
+./node_modules/.bin/commitlint --edit "$1"
