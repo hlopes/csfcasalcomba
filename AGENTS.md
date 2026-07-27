@@ -2,11 +2,11 @@
 
 ## Commands
 
-- Use **Bun** as the runtime/package manager (not npm/yarn)
-- `bun run dev` - Start dev server at http://localhost:3000
-- `bun run lint` - Lint code
-- `bun run format` - Format with Prettier
-- `bun run email:dev` - Preview email templates at http://localhost:4000
+- Use **npm** as the runtime/package manager (not bun/yarn)
+- `npm run dev` - Start dev server at http://localhost:3000
+- `npm run lint` - Lint code
+- `npm run format` - Format with Prettier
+- `npm run email:dev` - Preview email templates at http://localhost:4000
 
 ## Conventions
 
@@ -25,7 +25,7 @@
 ## Email Development
 
 - Email templates in `src/components/mail-template/`
-- Preview at http://localhost:4000 via `bun run email:dev`
+- Preview at http://localhost:4000 via `npm run email:dev`
 - Uses React Email + Resend
 
 ## Key Files
