@@ -1,5 +1,7 @@
 # AGENTS.md
 
+When you need to search docs, use Context7.
+
 ## Commands
 
 - Use **npm** as the runtime/package manager (not bun/yarn)
