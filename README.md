@@ -24,7 +24,6 @@ The website is organized into the following main sections:
 - **Next.js 16**: The latest version of the popular React framework for server-side rendering, static site generation, and more.
 - **TypeScript**: Strongly typed programming language that builds on JavaScript, giving you better tooling at any scale.
 - **Tailwind CSS 4**: A utility-first CSS framework for rapid UI development.
-- **Bun**: A fast all-in-one JavaScript runtime, bundler, and package manager.
 - **ESLint and Prettier**: For consistent code style and quality.
 - **Husky and commitlint**: To enforce conventional commit messages.
 - **React Email and Resend**: For building and sending beautiful emails with React.
@@ -33,7 +32,7 @@ The website is organized into the following main sections:
 
 ### Prerequisites
 
-- [Bun](https://bun.sh/)
+- [Node.js](https://nodejs.org/) (npm)
 
 ### Installation and Development
 
@@ -47,7 +46,7 @@ The website is organized into the following main sections:
 2.  **Install dependencies:**
 
     ```bash
-    bun install
+    npm install
     ```
 
 3.  **Set up environment variables:**
@@ -58,24 +57,26 @@ The website is organized into the following main sections:
     # Resend API Key
     # You can get one from https://resend.com/
     RESEND_API_KEY=your-api-key
+    # Recipient address for the contact form
+    RESEND_TO=your-email@example.com
     ```
 
 4.  **Run the development server:**
 
     ```bash
-    bun run dev
+    npm run dev
     ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 ## 🛠️ Available Scripts
 
-- `bun run dev`: Starts the development server.
-- `bun run build`: Builds the application for production.
-- `bun run start`: Starts a production server.
-- `bun run lint`: Lints the codebase for errors.
-- `bun run format`: Formats the code with Prettier.
-- `bun run email:dev`: Starts the React Email development server.
+- `npm run dev`: Starts the development server.
+- `npm run build`: Builds the application for production.
+- `npm run start`: Starts a production server.
+- `npm run lint`: Lints the codebase for errors.
+- `npm run format`: Formats the code with Prettier.
+- `npm run email:dev`: Starts the React Email development server.
 
 ## 📂 Project Structure
 
@@ -95,7 +96,7 @@ csfcasalcomba/
 │   ├── lib/              # Library functions and utilities
 │   ├── styles/           # Global styles
 │   └── types/            # TypeScript type definitions
-├── bun.lockb             # Bun lockfile
+├── package-lock.json     # npm lockfile
 ├── components.json       # Shadcn UI components configuration
 ├── commitlint.config.js  # Commitlint configuration
 ├── eslint.config.mjs     # ESLint configuration
@@ -128,7 +129,7 @@ Styling is handled with Tailwind CSS, a utility-first CSS framework. We use `cls
 This project uses React Email to build and style emails with React components, and Resend to send them.
 
 - **`src/components/mail-template`**: Contains all the email templates.
-- **`bun run email:dev`**: Starts a development server at [http://localhost:4000](http://localhost:4000) to preview your email templates.
+- **`npm run email:dev`**: Starts a development server at [http://localhost:4000](http://localhost:4000) to preview your email templates.
 
 ## 🎨 Linting and Formatting
 
