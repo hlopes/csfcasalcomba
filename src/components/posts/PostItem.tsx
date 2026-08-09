@@ -24,7 +24,7 @@ export default function PostItem({ description, icon, title, url }: Post) {
           <h3 className="text-hoverdark my-8 text-lg font-semibold dark:text-white">
             {title}
           </h3>
-          <p className="text-justify">{description}</p>
+          <p className="text-pretty">{description}</p>
         </div>
       </AnimateTop>
     </Link>

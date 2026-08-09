@@ -9,7 +9,7 @@ type MailTemplateProps = {
 
 const MailTemplate = ({ content, from }: MailTemplateProps) => {
   return (
-    <Html lang="en">
+    <Html lang="pt">
       <Container style={container}>
         <Section style={track.container}>
           <Text style={global.paragraphWithBold}>
