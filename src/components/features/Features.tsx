@@ -75,6 +75,7 @@ export default function Features({ data }: FeaturesProps) {
                 fill
                 src={image}
                 sizes="(max-width: 1024px) 100vw, (max-width: 1390px) 50vw, 695px"
+                loading="eager"
               />
             </AnimateLeft>
           </div>
