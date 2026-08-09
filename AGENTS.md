@@ -60,3 +60,17 @@ Instruction file for the **csfcasalcomba** repo — institutional website for "C
 - `src/lib/mail.ts` - `'use server'` form action, zod-validated, Resend delivery
 - `src/app/globals.css` - Tailwind v4 theme + all design tokens
 - `src/data/menu-data.ts` - Navigation structure
+
+## Agent skills
+
+### Issue tracker
+
+Issues and PRDs live in this repo's GitHub Issues, operated via the `gh` CLI. See `docs/agents/issue-tracker.md`.
+
+### Triage labels
+
+Default vocabulary: `needs-triage`, `needs-info`, `ready-for-agent`, `ready-for-human`, `wontfix`. See `docs/agents/triage-labels.md`.
+
+### Domain docs
+
+Single-context layout: `CONTEXT.md` + `docs/adr/` at the repo root. See `docs/agents/domain.md`.
