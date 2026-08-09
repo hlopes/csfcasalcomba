@@ -1,12 +1,11 @@
+import Image from 'next/image'
 import SectionWrapper from '@/components/section-wrapper/SectionWrapper'
-import { Button } from '@/components/ui/button'
 import {
   Dialog,
   DialogContent,
   DialogDescription,
   DialogHeader,
   DialogTitle,
-  DialogTrigger,
 } from '@/components/ui/dialog'
 import { ScrollArea } from '@/components/ui/scroll-area'
 import { Separator } from '@/components/ui/separator'
@@ -66,7 +65,7 @@ export default function IRSDialog() {
 
                 <div className="bg-background flex w-full flex-col items-center justify-evenly gap-8 px-6 py-8 xl:w-1/4">
                   <div className="fade-in hidden h-full flex-col items-center gap-3 delay-1 xl:flex">
-                    <img
+                    <Image
                       src="/images/logo/logo.png"
                       alt="Logo Centro Social da Freguesia de Casal Comba"
                       className="h-auto w-full object-contain"

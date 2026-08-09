@@ -4,6 +4,9 @@ import { toast } from 'sonner'
 
 import AnimateTop from '@/components/animations/AnimateTop'
 import { Button } from '@/components/ui/button'
+import { Input } from '@/components/ui/input'
+import { Label } from '@/components/ui/label'
+import { Textarea } from '@/components/ui/textarea'
 import { sendEmail } from '@/lib/mail'
 
 export default function EmailForm() {
@@ -24,12 +27,9 @@ export default function EmailForm() {
     <AnimateTop transition={{ delay: 0.3, duration: 0.5 }}>
       <div className="mx-auto max-w-screen-md px-4 py-8 lg:py-16">
         <form action={send} className="space-y-8">
-          <div>
-            <label className="mb-2 block text-sm font-medium" htmlFor="email">
-              Email
-            </label>
-            <input
-              className="focus:ring-primary-500 focus:border-primary-500 dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light block w-full border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 shadow-sm dark:border-gray-600 dark:bg-cyan-900 dark:text-white dark:placeholder-gray-400"
+          <div className="space-y-2">
+            <Label htmlFor="email">Email</Label>
+            <Input
               id="email"
               name="email"
               placeholder="name@mail.com"
@@ -37,12 +37,9 @@ export default function EmailForm() {
               type="email"
             />
           </div>
-          <div>
-            <label className="mb-2 block text-sm font-medium" htmlFor="subject">
-              Assunto
-            </label>
-            <input
-              className="focus:ring-primary-500 focus:border-primary-500 dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light block w-full border border-gray-300 bg-gray-50 p-3 text-sm text-gray-900 shadow-sm dark:border-gray-600 dark:bg-cyan-900 dark:text-white dark:placeholder-gray-400"
+          <div className="space-y-2">
+            <Label htmlFor="subject">Assunto</Label>
+            <Input
               id="subject"
               name="subject"
               placeholder="Em que podemos ajudar"
@@ -50,18 +47,15 @@ export default function EmailForm() {
               type="text"
             />
           </div>
-          <div className="sm:col-span-2">
-            <label className="mb-2 block text-sm font-medium" htmlFor="message">
-              Mensagem
-            </label>
-            <textarea
-              className="focus:ring-primary-500 focus:border-primary-500 dark:focus:ring-primary-500 dark:focus:border-primary-500 block w-full border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 shadow-sm dark:border-gray-600 dark:bg-cyan-900 dark:text-white dark:placeholder-gray-400"
+          <div className="space-y-2 sm:col-span-2">
+            <Label htmlFor="message">Mensagem</Label>
+            <Textarea
               id="message"
               name="message"
               placeholder="Deixe o seu comentário ou questão"
               required
               rows={6}
-            ></textarea>
+            />
           </div>
           <Button className="float-end" size="lg" type="submit">
             Enviar
