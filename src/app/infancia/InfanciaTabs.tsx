@@ -25,7 +25,13 @@ export default function InfanciaTabs() {
 
   return (
     <>
-      <Tabs currentTab={currentTab} data={data} onTabChange={handleTabChange} />
+      <div className="font-comic">
+        <Tabs
+          currentTab={currentTab}
+          data={data}
+          onTabChange={handleTabChange}
+        />
+      </div>
       {currentTab === CATL_TAB_INDEX && <DocsDialogs />}
     </>
   )

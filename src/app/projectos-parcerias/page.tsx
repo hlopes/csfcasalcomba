@@ -20,7 +20,7 @@ export default function ProjectosParcerias() {
       <SectionWrapper>
         <SectionHeader
           description="Os nossos projetos sociais são concebidos para atender às necessidades urgentes da comunidade, promovendo o desenvolvimento sustentável e melhorando a qualidade de vida de indivíduos e famílias."
-          title="Projetos"
+          title=""
         />
       </SectionWrapper>
       <Posts data={projectsData} />

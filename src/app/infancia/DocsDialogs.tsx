@@ -158,7 +158,7 @@ export default function DocsDialogs() {
           </DialogTrigger>
           <DialogContent className="xl:max-w-[1200px]">
             <DialogHeader>
-              <DialogTitle className="text-primary">
+              <DialogTitle className="text-primary mx-10 sm:mx-0">
                 RENOVAÇÃO DA INSCRIÇÃO NO CATL
               </DialogTitle>
               <DialogDescription>
