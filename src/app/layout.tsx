@@ -12,6 +12,7 @@ import { ReactNode } from 'react'
 
 import Footer from '@/components/footer/Footer'
 import Header from '@/components/header/Header'
+import ExternalLinksMenu from '@/components/external-links-menu/ExternalLinksMenu'
 import ScrollToTop from '@/components/scroll-to-top/ScrollToTop'
 import { Toaster } from '@/components/ui/sonner'
 
@@ -63,6 +64,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
             {children}
             <Footer />
             <ScrollToTop />
+            <ExternalLinksMenu />
             {/* TODO: Re-enable when IRS campaign is active again */}
             {/* <IRSDialog /> */}
             <Toaster richColors />

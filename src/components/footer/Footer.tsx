@@ -1,3 +1,6 @@
+import Image from 'next/image'
+import Link from 'next/link'
+
 import AnimateTop from '@/components/animations/AnimateTop'
 import Address from '@/components/footer/Address'
 import Contacts from '@/components/footer/Contacts'
@@ -8,24 +11,24 @@ export default function Footer() {
     <footer className="border-stroke dark:bg-blacksection bg-background mt-12 border-t lg:mt-24">
       <div className="max-w-c-1390 mx-auto px-4 md:px-8 2xl:px-0">
         <div className="py-10 lg:py-16">
-          <div className="mb-10 flex flex-col justify-center gap-y-6 md:flex-row md:flex-wrap lg:justify-between">
+          <div className="mb-10 flex flex-col justify-center gap-y-6 md:flex-row md:flex-wrap lg:grid lg:grid-cols-3 lg:gap-8">
             <AnimateTop
-              className="mb-4 w-full lg:w-1/3"
+              className="mb-4 w-full lg:w-auto"
               transition={{ delay: 0.2, duration: 0.5 }}
+            >
+              <Intro />
+            </AnimateTop>
+            <AnimateTop
+              className="w-full self-center md:w-1/2 lg:w-auto"
+              transition={{ delay: 0.4, duration: 0.5 }}
             >
               <Address />
             </AnimateTop>
             <AnimateTop
-              className="w-full md:w-1/2 lg:w-1/3"
-              transition={{ delay: 0.4, duration: 0.5 }}
-            >
-              <Contacts />
-            </AnimateTop>
-            <AnimateTop
-              className="w-full md:w-1/2 lg:w-1/3"
+              className="w-full md:w-1/2 lg:w-auto"
               transition={{ delay: 0.6, duration: 0.5 }}
             >
-              <Intro />
+              <Contacts />
             </AnimateTop>
           </div>
           <AnimateTop
@@ -43,6 +46,34 @@ export default function Footer() {
               width="100%"
             />
           </AnimateTop>
+        </div>
+        <div className="mb-8 flex items-start justify-between gap-4">
+          <Link
+            href="https://www.facebook.com/csfcasalcomba/"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <Image
+              alt="Facebook"
+              className="h-auto"
+              height={53}
+              src="/images/footer/logo-facebook.svg"
+              width={140}
+            />
+          </Link>
+          <Link
+            href="https://www.livroreclamacoes.pt/"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <Image
+              alt="Livro de Reclamações"
+              className="h-auto"
+              height={53}
+              src="/images/footer/logo-reclamacoes.png"
+              width={140}
+            />
+          </Link>
         </div>
         <div className="border-stroke dark:border-strokedark flex flex-col flex-wrap items-center justify-center gap-4 border-t py-8 lg:flex-row lg:gap-0">
           <AnimateTop transition={{ delay: 0.1, duration: 0.5 }}>

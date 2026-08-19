@@ -23,24 +23,6 @@ export default function Features({ data }: FeaturesProps) {
             )}
             key={id}
           >
-            {id % 2 === 0 && (
-              <div className="absolute -top-16 -z-1 mx-auto hidden h-[350px] w-[90%] lg:block">
-                <Image
-                  alt="Dotted Shape"
-                  className="dark:hidden"
-                  fill
-                  src="/images/shape/shape-dotted-light.svg"
-                  sizes="(max-width: 1024px) 1px, (max-width: 1390px) 90vw, 1251px"
-                />
-                <Image
-                  alt="Dotted Shape"
-                  className="hidden dark:block"
-                  fill
-                  src="/images/shape/shape-dotted-dark.svg"
-                  sizes="(max-width: 1024px) 1px, (max-width: 1390px) 90vw, 1251px"
-                />
-              </div>
-            )}
             <AnimateRight
               className="lg:w-1/2"
               transition={{ delay: 0.1, duration: 0.5 }}
