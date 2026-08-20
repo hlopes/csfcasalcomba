@@ -47,34 +47,6 @@ export default function Footer() {
             />
           </AnimateTop>
         </div>
-        <div className="mb-8 flex items-start justify-between gap-4">
-          <Link
-            href="https://www.facebook.com/csfcasalcomba/"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            <Image
-              alt="Facebook"
-              className="h-auto"
-              height={53}
-              src="/images/footer/logo-facebook.svg"
-              width={140}
-            />
-          </Link>
-          <Link
-            href="https://www.livroreclamacoes.pt/"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            <Image
-              alt="Livro de Reclamações"
-              className="h-auto"
-              height={53}
-              src="/images/footer/logo-reclamacoes.png"
-              width={140}
-            />
-          </Link>
-        </div>
         <div className="border-stroke dark:border-strokedark flex flex-col flex-wrap items-center justify-center gap-4 border-t py-8 lg:flex-row lg:gap-0">
           <AnimateTop transition={{ delay: 0.1, duration: 0.5 }}>
             <p className="text-primary">
