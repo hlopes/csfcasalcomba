@@ -18,12 +18,7 @@ export default function SectionWrapper({
 
   return (
     <section className={cn('overflow-hidden', finalSectionClassName)}>
-      <div
-        className={cn(
-          'max-w-c-1390 relative mx-auto overflow-hidden',
-          finalDivClassName
-        )}
-      >
+      <div className={cn('max-w-c-1390 relative mx-auto', finalDivClassName)}>
         {children}
       </div>
     </section>

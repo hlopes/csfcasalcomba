@@ -10,8 +10,7 @@
 @theme inline {
   --font-*: initial;
   --font-sans: var(--font-source);
-  --font-display: var(--font-almendra);
-  --font-comic: var(--font-comic-neue);
+  --font-display: var(--font-display-sans);
 
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -47,6 +46,7 @@
   --color-black: var(--black);
   --color-blacksection: var(--blacksection);
   --color-stroke: var(--stroke);
+  --color-strokedark: var(--strokedark, var(--stroke));
   --color-hoverdark: var(--hoverdark);
   --color-alabaster: var(--alabaster);
 
@@ -55,12 +55,13 @@
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
 
-  --shadow-solid-3: 0px 6px 90px rgba(8, 14, 40, 0.04);
-  --shadow-solid-4: 0px 6px 90px rgba(8, 14, 40, 0.1);
+  /* Elevation scale: raised (cards, slides, posts) / overlay (tabs, accordion) / hover */
+  --shadow-solid-3: 0px 8px 30px rgba(45, 74, 170, 0.06);
+  --shadow-solid-4: 0px 8px 30px rgba(45, 74, 170, 0.12);
   --shadow-solid-5: 0px 8px 24px rgba(45, 74, 170, 0.08);
-  --shadow-solid-6: 0px 8px 24px rgba(10, 16, 35, 0.08);
-  --shadow-solid-8: 0px 12px 120px rgba(45, 74, 170, 0.06);
-  --shadow-solid-9: 0px 12px 30px rgba(45, 74, 170, 0.06);
+  --shadow-solid-6: 0px 8px 24px rgba(45, 74, 170, 0.08);
+  --shadow-solid-8: 0px 8px 24px rgba(45, 74, 170, 0.08);
+  --shadow-solid-9: 0px 8px 30px rgba(45, 74, 170, 0.06);
   --shadow-solid-10: 0px 8px 30px rgba(45, 74, 170, 0.06);
   --shadow-solid-13: 0px 2px 19px rgba(0, 0, 0, 0.05);
   --shadow-solid-1: 0 4px 2px -2px rgba(45, 74, 170, 0.06);
@@ -72,13 +73,14 @@
 
 :root {
   --radius: 0.625rem;
-  --background: oklch(1 0 0);
-  --foreground: #757693;
+  --header-height: 10rem;
+  --background: #faf7f2;
+  --foreground: #52536b;
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.145 0 0);
-  --primary: #0891b2;
+  --primary: #0e7490;
   --primary-foreground: oklch(0.985 0 0);
   --secondary: oklch(0.97 0 0);
   --secondary-foreground: oklch(0.205 0 0);
@@ -114,11 +116,12 @@
 .dark {
   --background: #121212;
   --foreground: #ccc;
+  --strokedark: #2d2f40;
   --card: oklch(0.205 0 0);
   --card-foreground: oklch(0.985 0 0);
   --popover: oklch(0.205 0 0);
   --popover-foreground: oklch(0.985 0 0);
-  --primary: #09a2c3;
+  --primary: #22b8d4;
   --primary-foreground: oklch(0.205 0 0);
   --secondary: oklch(0.269 0 0);
   --secondary-foreground: oklch(0.985 0 0);
@@ -147,13 +150,41 @@
   --stroke: #2d2f40;
 }
 
+/* Z-index scale: content 0-10 / scroll-to-top 20 / nav scrim 30 / header 40 / external-links 50 / skip-link + toaster 100 */
 @layer base {
   * {
     @apply border-border outline-ring/50;
   }
 
+  html {
+    scroll-padding-top: calc(var(--header-height) + 1rem);
+  }
+
   body {
     @apply bg-background text-foreground text-regular relative z-1 font-sans font-normal;
+  }
+
+  :focus-visible {
+    outline: 3px solid var(--primary);
+    outline-offset: 2px;
+  }
+
+  main {
+    scroll-margin-top: calc(var(--header-height) + 1rem);
+  }
+
+  main:focus {
+    outline: none;
+  }
+
+  .swiper-pagination-bullet {
+    position: relative;
+  }
+
+  .swiper-pagination-bullet::after {
+    content: '';
+    position: absolute;
+    inset: -16px;
   }
 }
 
@@ -177,5 +208,9 @@
 }
 
 @utility dropdown {
-  @apply bg-background hidden min-w-max flex-col gap-4 px-4 pt-4 duration-300 ease-in xl:invisible xl:absolute xl:right-0 xl:mt-0 xl:flex xl:w-[250px] xl:translate-y-10 xl:px-0 xl:pr-6 xl:pb-6 xl:opacity-0 xl:group-hover:visible xl:group-hover:translate-y-0 xl:group-hover:opacity-100;
+  @apply bg-background hidden min-w-max flex-col gap-4 px-4 pt-4 duration-300 ease-in xl:invisible xl:absolute xl:right-0 xl:mt-0 xl:flex xl:w-[250px] xl:translate-y-10 xl:px-0 xl:pr-6 xl:pb-6 xl:opacity-0 xl:group-focus-within:visible xl:group-focus-within:translate-y-0 xl:group-focus-within:opacity-100 xl:group-hover:visible xl:group-hover:translate-y-0 xl:group-hover:opacity-100;
+}
+
+@utility skip-link {
+  @apply bg-primary text-primary-foreground sr-only z-100 rounded-md px-4 py-3 text-sm font-semibold focus:not-sr-only focus:absolute focus:top-4 focus:left-4;
 }

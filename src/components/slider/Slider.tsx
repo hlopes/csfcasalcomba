@@ -1,11 +1,14 @@
 'use client'
 
+import { useState } from 'react'
 import { Autoplay, Pagination } from 'swiper/modules'
+import type { Swiper as SwiperType } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
 
 import AnimateTop from '@/components/animations/AnimateTop'
 import SectionWrapper from '@/components/section-wrapper/SectionWrapper'
 import Slide from '@/components/slider/Slide'
+import { Button } from '@/components/ui/button'
 import { Image } from '@/types/Image'
 
 type SwiperSlideProps = {
@@ -13,16 +16,50 @@ type SwiperSlideProps = {
 }
 
 export default function Slider({ images }: SwiperSlideProps) {
+  const [swiper, setSwiper] = useState<SwiperType | null>(null)
+  const [isPaused, setIsPaused] = useState(false)
+
+  const toggleAutoplay = () => {
+    if (!swiper?.autoplay) {
+      return
+    }
+
+    if (isPaused) {
+      swiper.autoplay.start()
+    } else {
+      swiper.autoplay.stop()
+    }
+
+    setIsPaused(!isPaused)
+  }
+
   return (
     <SectionWrapper>
       <AnimateTop transition={{ delay: 0.1, duration: 1 }}>
-        <div className="swiper testimonial-01 mb-20 pb-22.5">
+        <div
+          aria-label="Galeria de fotografias"
+          className="swiper testimonial-01 mb-20 pb-22.5"
+          role="region"
+        >
+          <div className="mb-4 flex justify-end">
+            <Button
+              aria-label={isPaused ? 'Retomar carrossel' : 'Pausar carrossel'}
+              aria-pressed={isPaused}
+              onClick={toggleAutoplay}
+              type="button"
+              variant="outline"
+            >
+              {isPaused ? 'Retomar' : 'Pausar'}
+            </Button>
+          </div>
           {/* <!-- Additional required wrapper --> */}
           <Swiper
             autoplay={{
-              delay: 2500,
+              delay: 5000,
               disableOnInteraction: false,
+              pauseOnMouseEnter: true,
             }}
+            onSwiper={setSwiper}
             breakpoints={{
               // when window width is >= 640px
               0: {

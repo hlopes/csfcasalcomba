@@ -10,13 +10,16 @@ export default function ThemeToggler() {
 
   return (
     <Button
-      className="absolute top-8 right-4 cursor-pointer xl:static"
+      aria-label={
+        theme === 'dark' ? 'Mudar para tema claro' : 'Mudar para tema escuro'
+      }
+      className="min-h-11 min-w-11 cursor-pointer"
       onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
       size="icon"
       variant="link"
     >
-      <Sun className="hidden dark:block" />
-      <Moon className="dark:hidden" />
+      <Sun aria-hidden="true" className="hidden dark:block" />
+      <Moon aria-hidden="true" className="dark:hidden" />
     </Button>
   )
 }

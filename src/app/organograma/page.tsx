@@ -4,7 +4,7 @@ import SectionWrapper from '@/components/section-wrapper/SectionWrapper'
 
 export default function Organograma() {
   return (
-    <main>
+    <main id="main-content">
       <HeroSecondary
         imageUrl="/images/organograma/hero.jpg"
         title="Organograma"

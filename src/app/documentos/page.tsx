@@ -8,7 +8,7 @@ import { data } from '@/data/documentos/docs-data'
 
 export default function Documentos() {
   return (
-    <main>
+    <main id="main-content">
       <HeroSecondary
         imageUrl="/images/documentos/hero.jpg"
         title="Documentos"

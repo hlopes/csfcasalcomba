@@ -11,13 +11,19 @@ export default function TabItem({
 }: Tab) {
   return (
     <div
+      aria-label={title}
       className={cn(
         'relative items-center md:gap-8 lg:gap-18',
         isVisible ? 'flex' : 'hidden'
       )}
+      hidden={!isVisible}
+      role="tabpanel"
+      tabIndex={isVisible ? 0 : -1}
     >
       <div className="md:w-1/2">
-        <h2 className="text-primary mb-16 text-2xl uppercase">{title}</h2>
+        <h2 className="text-primary mb-16 text-2xl tracking-wide uppercase">
+          {title}
+        </h2>
         <ul className="space-y-8 text-pretty">
           {content.map((item) => (
             <li key={item.title}>
@@ -31,9 +37,10 @@ export default function TabItem({
         <Image
           alt={title}
           fill
-          priority
-          src={image}
+          loading={isVisible ? 'eager' : 'lazy'}
+          priority={isVisible}
           sizes="(max-width: 1024px) 100vw"
+          src={image}
         />
       </div>
     </div>

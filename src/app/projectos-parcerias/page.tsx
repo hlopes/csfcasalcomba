@@ -12,7 +12,7 @@ import { data as projectsData } from '@/data/projectos-parcerias/posts-data'
 
 export default function ProjectosParcerias() {
   return (
-    <main>
+    <main id="main-content">
       <HeroSecondary
         imageUrl="/images/projectos-parcerias/hero.avif"
         title="Projetos e Parcerias"

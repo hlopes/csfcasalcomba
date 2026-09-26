@@ -16,7 +16,7 @@ export default function TextColumns({ data }: TextColumnsProps) {
               <div className="w-full lg:w-1/2" key={id}>
                 <div className="text-pretty">
                   <div className="mx-auto max-w-120">
-                    <h2 className="text-primary mx-auto mb-4 text-2xl uppercase">
+                    <h2 className="text-primary font-display mx-auto mb-4 text-2xl tracking-wide uppercase">
                       {title}
                     </h2>
                     <p className="mx-auto">{description}</p>
@@ -39,7 +39,7 @@ export default function TextColumns({ data }: TextColumnsProps) {
           <div className="text-pretty">
             <AnimateTop transition={{ delay: 0.1, duration: 0.5 }}>
               <div className="mx-auto max-w-240">
-                <h2 className="text-primary mx-auto mb-4 text-2xl uppercase">
+                <h2 className="text-primary font-display mx-auto mb-4 text-2xl tracking-wide uppercase">
                   {title}
                 </h2>
                 {description}

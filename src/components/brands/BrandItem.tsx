@@ -1,6 +1,6 @@
 'use client'
 
-import { motion } from 'framer-motion'
+import { motion } from 'motion/react'
 import Image from 'next/image'
 
 import { cn } from '@/lib/utils'
@@ -16,7 +16,7 @@ export default function BrandItem({ className, href, id, image, name }: Brand) {
       initial="hidden"
       rel="noopener noreferrer"
       target="_blank"
-      transition={{ delay: id, duration: 1 }}
+      transition={{ delay: Math.min(id, 0.3), duration: 0.4 }}
       variants={{
         hidden: {
           opacity: 0,

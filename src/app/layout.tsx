@@ -2,9 +2,9 @@ import type { Metadata } from 'next'
 
 import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/next'
-import { MotionConfig } from 'framer-motion'
+import { MotionConfig } from 'motion/react'
 import { ThemeProvider } from 'next-themes'
-import { Almendra, Comic_Neue, Source_Sans_3 } from 'next/font/google'
+import { Lexend, Source_Sans_3 } from 'next/font/google'
 
 import './globals.css'
 
@@ -19,22 +19,16 @@ import { Toaster } from '@/components/ui/sonner'
 // TODO: Re-enable when IRS campaign is active again
 // import IRSDialog from './IRSDialog'
 
-const comic = Comic_Neue({
+const display = Lexend({
   subsets: ['latin'],
-  variable: '--font-comic-neue',
-  weight: '400',
-})
-
-const almendra = Almendra({
-  subsets: ['latin'],
-  variable: '--font-almendra',
-  weight: '400',
+  variable: '--font-display-sans',
+  weight: ['400', '600', '700'],
 })
 
 const source = Source_Sans_3({
   subsets: ['latin'],
   variable: '--font-source',
-  weight: ['400', '600'],
+  weight: ['400', '600', '700'],
 })
 
 export const metadata: Metadata = {
@@ -50,7 +44,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="pt" suppressHydrationWarning>
       <body
-        className={`${almendra.variable} ${source.variable} ${comic.variable} antialiased`}
+        className={`${display.variable} ${source.variable} antialiased`}
         id="scrollable"
       >
         <MotionConfig reducedMotion="user">
