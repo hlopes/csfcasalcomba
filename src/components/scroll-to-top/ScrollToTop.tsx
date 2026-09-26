@@ -32,14 +32,17 @@ export default function ScrollToTop() {
   return (
     <div className="fixed right-0 bottom-8 z-20">
       {isVisible && (
-        <div
-          aria-label="scroll to top"
-          className="bg-primary hover:scale-[1.06] flex h-12 w-12 cursor-pointer items-center justify-center text-primary-foreground shadow-lg transition duration-300 ease-in-out"
+        <button
+          aria-label="Voltar ao topo"
+          className="bg-primary text-primary-foreground flex h-12 w-12 cursor-pointer items-center justify-center shadow-lg transition duration-300 ease-in-out hover:scale-[1.06]"
           onClick={scrollToTop}
+          type="button"
         >
-          <span className="mt-[6px] h-3 w-3 rotate-45 border-t border-l border-white"></span>
-          <span className="sr-only">scroll to top</span>
-        </div>
+          <span
+            aria-hidden="true"
+            className="mt-[6px] h-3 w-3 rotate-45 border-t border-l border-white"
+          ></span>
+        </button>
       )}
     </div>
   )

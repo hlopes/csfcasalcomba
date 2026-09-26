@@ -16,7 +16,7 @@ export default function Boards({ data }: BoardsProps) {
             key={id}
             transition={{ delay: id, duration: 0.5 }}
           >
-            <h3 className="text-primary mb-8 text-2xl">{title}</h3>
+            <h3 className="text-primary font-display mb-8 text-2xl">{title}</h3>
             <div className="border-stroke mt-8 border-t pt-8 pb-12">
               {description}
             </div>

@@ -6,7 +6,7 @@ import SectionWrapper from '@/components/section-wrapper/SectionWrapper'
 
 export default function Home() {
   return (
-    <main>
+    <main id="main-content">
       <HeroSecondary imageUrl="/images/404/404.jpg" title="404" />
       <SectionWrapper>
         <SectionHeader

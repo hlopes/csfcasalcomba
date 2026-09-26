@@ -7,7 +7,7 @@ import { images } from '@/data/area-senior/images-data'
 
 export default function AreaSenior() {
   return (
-    <main>
+    <main id="main-content">
       <HeroSecondary
         imageUrl="/images/area-senior/hero.avif"
         title="Área Sénior"

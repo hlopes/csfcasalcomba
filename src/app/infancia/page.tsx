@@ -7,7 +7,7 @@ import { images } from '@/data/infancia/images-data'
 
 export default function Infancia() {
   return (
-    <main>
+    <main id="main-content">
       <HeroSecondary imageUrl="/images/infancia/hero.avif" title="Infância" />
       <Suspense>
         <InfanciaTabs />

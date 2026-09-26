@@ -5,7 +5,7 @@ import SectionWrapper from '@/components/section-wrapper/SectionWrapper'
 
 export default function Contato() {
   return (
-    <main>
+    <main id="main-content">
       <HeroSecondary imageUrl="/images/contato/hero.jpg" title="Contato" />
       <SectionWrapper>
         <SectionHeader

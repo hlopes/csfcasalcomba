@@ -1,6 +1,6 @@
 'use client'
 
-import { motion } from 'framer-motion'
+import { motion } from 'motion/react'
 import { BookOpen, ExternalLink } from 'lucide-react'
 import { useEffect, useState } from 'react'
 
@@ -64,9 +64,7 @@ export default function ExternalLinksMenu() {
                 }}
               >
                 <Icon className="text-primary h-4 w-4" />
-                <span className="whitespace-nowrap">
-                  {label}
-                </span>
+                <span className="whitespace-nowrap">{label}</span>
               </motion.a>
             ))}
           </div>
@@ -74,7 +72,7 @@ export default function ExternalLinksMenu() {
         <motion.button
           aria-expanded={open}
           aria-label="Links externos"
-          className="bg-primary text-white flex h-12 w-12 items-center justify-center shadow-lg cursor-pointer"
+          className="bg-primary flex h-12 w-12 cursor-pointer items-center justify-center text-white shadow-lg"
           onClick={() => setOpen((v) => !v)}
           whileHover={{ scale: 1.06 }}
           whileTap={{ scale: 0.94 }}

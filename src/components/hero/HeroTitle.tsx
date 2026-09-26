@@ -1,10 +1,11 @@
 'use client'
 
-import { motion } from 'framer-motion'
+import { motion } from 'motion/react'
 
 import { cn } from '@/lib/utils'
 
 type PageTitleProps = {
+  fontClassName?: string
   highlight?: string
   highlightDelay?: number
   text?: string
@@ -12,14 +13,21 @@ type PageTitleProps = {
 }
 
 export default function HeroTitle({
+  fontClassName = 'font-sans',
   highlight,
   highlightDelay,
   text,
   to,
 }: PageTitleProps) {
   return (
-    <h1 className="font-comic absolute top-1/2 left-1/2 z-10 -translate-x-1/2 -translate-y-1/2 text-center text-xl leading-8 font-medium text-white uppercase md:text-2xl md:leading-12 lg:text-5xl lg:leading-16 xl:text-6xl xl:leading-20">
+    <h1
+      className={cn(
+        'absolute top-1/2 left-1/2 z-10 -translate-x-1/2 -translate-y-1/2 text-center text-xl leading-8 font-medium tracking-wide text-balance text-white uppercase drop-shadow-[0_2px_12px_rgba(0,0,0,0.45)] md:text-2xl md:leading-12 lg:text-5xl lg:leading-16 xl:text-6xl xl:leading-20',
+        fontClassName
+      )}
+    >
       <motion.span
+        animate={{ filter: 'blur(0px)', opacity: 1, y: 0 }}
         className="block"
         initial={{ filter: 'blur(6px)', opacity: 0, y: 8 }}
         transition={{
@@ -27,8 +35,6 @@ export default function HeroTitle({
           duration: 0.8,
           ease: 'easeOut',
         }}
-        whileInView={{ filter: 'blur(0px)', opacity: 1, y: 0 }}
-        viewport={{ once: true }}
       >
         {text && <span className="block">{text}</span>}
         {highlight && (

@@ -50,11 +50,16 @@ export default function Header() {
   })
 
   useEffect(() => {
-    window.addEventListener('resize', () => closeMenu())
+    window.addEventListener('resize', closeMenu)
+
+    return () => window.removeEventListener('resize', closeMenu)
   }, [closeMenu])
 
   return (
     <>
+      <a className="skip-link" href="#main-content">
+        Saltar para o conteúdo principal
+      </a>
       {navigationOpen && (
         <div className="fixed top-0 left-0 z-30 min-h-full w-full bg-black opacity-40"></div>
       )}
@@ -62,11 +67,14 @@ export default function Header() {
         className="bg-background fixed top-0 left-0 z-40 w-full py-8"
         ref={containerRef}
       >
-        <div className="max-w-c-1390 relative mx-auto items-center justify-between px-4 md:px-8 xl:flex 2xl:px-0">
+        <nav
+          aria-label="Navegação principal"
+          className="max-w-c-1390 relative mx-auto items-center justify-between px-4 md:px-8 xl:flex 2xl:px-0"
+        >
           <div className="flex w-full items-center justify-between xl:w-1/4">
             <Link href="/" onClick={closeMenu}>
               <Image
-                alt="logo"
+                alt="Logótipo do Centro Social da Freguesia de Casal Comba"
                 className="h-auto w-full"
                 height={91}
                 priority
@@ -107,7 +115,7 @@ export default function Header() {
               </Tooltip>
             </TooltipProvider>
           </div>
-        </div>
+        </nav>
       </header>
     </>
   )

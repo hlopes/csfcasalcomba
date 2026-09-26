@@ -14,26 +14,26 @@ export default function Footer() {
           <div className="mb-10 flex flex-col justify-center gap-y-6 md:flex-row md:flex-wrap lg:grid lg:grid-cols-3 lg:gap-8">
             <AnimateTop
               className="mb-4 w-full lg:w-auto"
-              transition={{ delay: 0.2, duration: 0.5 }}
+              transition={{ delay: 0, duration: 0.4 }}
             >
               <Intro />
             </AnimateTop>
             <AnimateTop
               className="w-full self-center md:w-1/2 lg:w-auto"
-              transition={{ delay: 0.4, duration: 0.5 }}
+              transition={{ delay: 0.05, duration: 0.4 }}
             >
               <Address />
             </AnimateTop>
             <AnimateTop
               className="w-full md:w-1/2 lg:w-auto"
-              transition={{ delay: 0.6, duration: 0.5 }}
+              transition={{ delay: 0.1, duration: 0.4 }}
             >
               <Contacts />
             </AnimateTop>
           </div>
           <AnimateTop
             className="w-full"
-            transition={{ delay: 0.8, duration: 0.5 }}
+            transition={{ delay: 0.15, duration: 0.4 }}
           >
             <iframe
               allowFullScreen

@@ -15,7 +15,7 @@ export default function Features({ data }: FeaturesProps) {
   return (
     <SectionWrapper>
       <div className="flex flex-col gap-12 lg:gap-20">
-        {data.map(({ content, href, id, image, title }) => (
+        {data.map(({ content, href, id, image, title }, index) => (
           <div
             className={cn(
               'relative flex flex-col gap-8 lg:flex-row lg:gap-32',
@@ -27,7 +27,7 @@ export default function Features({ data }: FeaturesProps) {
               className="lg:w-1/2"
               transition={{ delay: 0.1, duration: 0.5 }}
             >
-              <h2 className="text-primary relative mb-6 text-2xl uppercase">
+              <h2 className="text-primary relative mb-6 text-2xl tracking-wide uppercase">
                 {title}
               </h2>
               {content}
@@ -55,9 +55,10 @@ export default function Features({ data }: FeaturesProps) {
               <Image
                 alt={title}
                 fill
-                src={image}
+                loading={index === 0 ? 'eager' : 'lazy'}
+                priority={index === 0}
                 sizes="(max-width: 1024px) 100vw, (max-width: 1390px) 50vw, 695px"
-                loading="eager"
+                src={image}
               />
             </AnimateLeft>
           </div>

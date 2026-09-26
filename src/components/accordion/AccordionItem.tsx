@@ -12,18 +12,25 @@ export default function AccordionItem({
   handleSectionToggle,
 }: AccordionItemProps) {
   const { content, id, title } = folder
+  const isOpen = activeSection === id
+  const buttonId = `accordion-button-${id}`
+  const panelId = `accordion-panel-${id}`
 
   return (
     <div className="border-stroke flex flex-col border-b last-of-type:border-none">
       <button
-        className="text-primary flex cursor-pointer items-center justify-between p-6 font-medium uppercase lg:px-10 lg:py-8"
+        aria-controls={panelId}
+        aria-expanded={isOpen}
+        className="text-primary flex min-h-11 cursor-pointer items-center justify-between gap-4 p-6 text-left font-medium tracking-wide uppercase lg:px-10 lg:py-8"
+        id={buttonId}
         onClick={() => {
           handleSectionToggle(id)
         }}
       >
         {title}
-        {activeSection === id ? (
+        {isOpen ? (
           <svg
+            aria-hidden="true"
             fill="none"
             height="4"
             viewBox="0 0 18 4"
@@ -37,6 +44,7 @@ export default function AccordionItem({
           </svg>
         ) : (
           <svg
+            aria-hidden="true"
             fill="none"
             height="18"
             viewBox="0 0 18 18"
@@ -51,10 +59,14 @@ export default function AccordionItem({
         )}
       </button>
       <div
+        aria-labelledby={buttonId}
         className={cn(
           'border-stroke border-t py-6 sm:px-6 lg:px-10 lg:py-8',
-          activeSection === id ? 'block' : 'hidden'
+          isOpen ? 'block' : 'hidden'
         )}
+        hidden={!isOpen}
+        id={panelId}
+        role="region"
       >
         {content}
       </div>

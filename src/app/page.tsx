@@ -5,7 +5,7 @@ import { featuresData } from '@/data/home/features-data'
 
 export default function Home() {
   return (
-    <main className="mt-40">
+    <main className="mt-[var(--header-height)]" id="main-content">
       <HeroPrimary />
       <Callout />
       <Features data={featuresData} />

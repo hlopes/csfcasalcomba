@@ -11,7 +11,7 @@ import { data as visionAndMissionData } from '@/data/instituicao/vision-mission-
 
 export default function Instituicao() {
   return (
-    <main>
+    <main id="main-content">
       <HeroSecondary
         imageUrl="/images/instituicao/hero.avif"
         title="A Instituição"
