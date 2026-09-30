@@ -1,4 +1,4 @@
-import AnimateTop from '@/components/animations/AnimateTop'
+import Animate from '@/components/animations/Animate'
 
 type SectionHeaderProps = {
   description: string
@@ -10,7 +10,7 @@ export default function SectionHeader({
   title,
 }: SectionHeaderProps) {
   return (
-    <AnimateTop transition={{ delay: 0.1, duration: 0.3 }}>
+    <Animate delay={0.1} duration={0.3}>
       <div className="mx-auto max-w-120 text-center">
         {title ? (
           <h2 className="text-primary font-display mx-auto mb-4 text-2xl tracking-wide uppercase">
@@ -19,6 +19,6 @@ export default function SectionHeader({
         ) : null}
         <p className="mx-auto">{description}</p>
       </div>
-    </AnimateTop>
+    </Animate>
   )
 }

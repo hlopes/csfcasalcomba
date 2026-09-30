@@ -5,7 +5,7 @@ import { Autoplay, Pagination } from 'swiper/modules'
 import type { Swiper as SwiperType } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
 
-import AnimateTop from '@/components/animations/AnimateTop'
+import Animate from '@/components/animations/Animate'
 import SectionWrapper from '@/components/section-wrapper/SectionWrapper'
 import Slide from '@/components/slider/Slide'
 import { Button } from '@/components/ui/button'
@@ -35,7 +35,7 @@ export default function Slider({ images }: SwiperSlideProps) {
 
   return (
     <SectionWrapper>
-      <AnimateTop transition={{ delay: 0.1, duration: 1 }}>
+      <Animate delay={0.1} duration={1}>
         <div
           aria-label="Galeria de fotografias"
           className="swiper testimonial-01 mb-20 pb-22.5"
@@ -87,7 +87,7 @@ export default function Slider({ images }: SwiperSlideProps) {
             ))}
           </Swiper>
         </div>
-      </AnimateTop>
+      </Animate>
     </SectionWrapper>
   )
 }
