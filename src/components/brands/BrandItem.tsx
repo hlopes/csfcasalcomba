@@ -1,8 +1,8 @@
 'use client'
 
-import { motion } from 'motion/react'
 import Image from 'next/image'
 
+import Animate from '@/components/animations/Animate'
 import { cn } from '@/lib/utils'
 import { Brand } from '@/types/Brand'
 
@@ -10,33 +10,25 @@ export default function BrandItem({ className, href, id, image, name }: Brand) {
   const finalClassName = !className ? 'h-20 w-20' : className
 
   return (
-    <motion.a
+    <Animate
       className={cn('relative block max-w-full', finalClassName)}
-      href={href}
-      initial="hidden"
-      rel="noopener noreferrer"
-      target="_blank"
-      transition={{ delay: Math.min(id, 0.3), duration: 0.4 }}
-      variants={{
-        hidden: {
-          opacity: 0,
-          y: -20,
-        },
-        visible: {
-          opacity: 1,
-          y: 0,
-        },
-      }}
-      viewport={{ once: true }}
-      whileInView="visible"
+      delay={Math.min(id, 0.3)}
+      duration={0.4}
     >
-      <Image
-        alt={name}
-        className="opacity-65 transition-all duration-300 hover:opacity-100"
-        fill
-        src={image}
-        sizes="(max-width: 1024px) 100vw"
-      />
-    </motion.a>
+      <a
+        className="relative block h-full w-full"
+        href={href}
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        <Image
+          alt={name}
+          className="opacity-65 transition-all duration-300 hover:opacity-100"
+          fill
+          src={image}
+          sizes="(max-width: 1024px) 100vw"
+        />
+      </a>
+    </Animate>
   )
 }

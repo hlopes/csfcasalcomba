@@ -2,7 +2,7 @@
 
 import { useRef } from 'react'
 
-import AnimateTop from '@/components/animations/AnimateTop'
+import Animate from '@/components/animations/Animate'
 import SectionWrapper from '@/components/section-wrapper/SectionWrapper'
 import TabItem from '@/components/tabs/TabItem'
 import { cn } from '@/lib/utils'
@@ -26,9 +26,9 @@ export default function Tabs({ currentTab, data, onTabChange }: TabsProps) {
 
   return (
     <SectionWrapper sectionClassName="p-0">
-      <AnimateTop
+      <Animate
         className="border-stroke shadow-solid-5 dark:bg-blacksection dark:shadow-solid-6 bg-background -mx-8 mb-14 flex flex-wrap justify-center border md:flex-nowrap md:items-baseline lg:gap-8 xl:mb-22 xl:gap-12"
-        transition={{ delay: 0.1, duration: 0.5 }}
+        delay={0.1}
       >
         <div
           aria-label="Secções"
@@ -78,15 +78,12 @@ export default function Tabs({ currentTab, data, onTabChange }: TabsProps) {
             )
           })}
         </div>
-      </AnimateTop>
-      <AnimateTop
-        className="max-w-c-1154 mx-auto"
-        transition={{ delay: 0.6, duration: 0.5 }}
-      >
+      </Animate>
+      <Animate className="max-w-c-1154 mx-auto" delay={0.6}>
         {data.map((tab) => (
           <TabItem isVisible={tab.id === currentTab} key={tab.id} {...tab} />
         ))}
-      </AnimateTop>
+      </Animate>
     </SectionWrapper>
   )
 }

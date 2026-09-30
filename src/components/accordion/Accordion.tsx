@@ -4,7 +4,7 @@ import { usePathname, useRouter, useSearchParams } from 'next/navigation'
 import { useState } from 'react'
 
 import AccordionItem from '@/components/accordion/AccordionItem'
-import AnimateRight from '@/components/animations/AnimateRight'
+import Animate from '@/components/animations/Animate'
 import SectionWrapper from '@/components/section-wrapper/SectionWrapper'
 import { Folder } from '@/types/Folder'
 
@@ -28,7 +28,7 @@ export default function Accordion({ data }: AccordionProps) {
 
   return (
     <SectionWrapper>
-      <AnimateRight className="p-1" transition={{ delay: 0.1, duration: 1 }}>
+      <Animate className="p-1" delay={0.1} direction="right" duration={1}>
         <div className="dark:border-stroke dark:bg-blacksection shadow-solid-8 dark:border">
           {data.map((folder) => (
             <AccordionItem
@@ -39,7 +39,7 @@ export default function Accordion({ data }: AccordionProps) {
             />
           ))}
         </div>
-      </AnimateRight>
+      </Animate>
     </SectionWrapper>
   )
 }

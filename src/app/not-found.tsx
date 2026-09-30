@@ -1,4 +1,4 @@
-import AnimateLeft from '@/components/animations/AnimateLeft'
+import Animate from '@/components/animations/Animate'
 import ArrowLink from '@/components/arrow-link/ArrowLink'
 import HeroSecondary from '@/components/hero/HeroSecondary'
 import SectionHeader from '@/components/section-header/SectionHeader'
@@ -13,11 +13,11 @@ export default function Home() {
           description="A página que procura não existe."
           title={''}
         />
-        <AnimateLeft transition={{ delay: 0.4, duration: 0.2 }}>
+        <Animate delay={0.4} direction="left" duration={0.2}>
           <div className="flex justify-center">
             <ArrowLink href="/" text="Voltar ao ínicio" variant="outline" />
           </div>
-        </AnimateLeft>
+        </Animate>
       </SectionWrapper>
     </main>
   )

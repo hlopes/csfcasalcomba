@@ -1,16 +1,13 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
-import AnimateTop from '@/components/animations/AnimateTop'
+import Animate from '@/components/animations/Animate'
 import { Post } from '@/types/Post'
 
 export default function PostItem({ description, icon, title, url }: Post) {
   return (
     <Link href={url ?? '#'} rel="noopener noreferrer" target="_blank">
-      <AnimateTop
-        className="group shadow-solid-3 hover:shadow-solid-4 dark:bg-blacksection bg-background dark:hover:bg-hoverdark z-40 h-full border-white transition-all"
-        transition={{ duration: 0.5 }}
-      >
+      <Animate className="group shadow-solid-3 hover:shadow-solid-4 dark:bg-blacksection bg-background dark:hover:bg-hoverdark z-40 h-full border-white transition-all">
         <div className="relative mx-auto flex aspect-video items-center justify-center overflow-hidden">
           <Image
             alt="title"
@@ -26,7 +23,7 @@ export default function PostItem({ description, icon, title, url }: Post) {
           </h3>
           <p className="text-pretty">{description}</p>
         </div>
-      </AnimateTop>
+      </Animate>
     </Link>
   )
 }

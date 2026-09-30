@@ -3,7 +3,7 @@
 import { useRef, useState } from 'react'
 import { toast } from 'sonner'
 
-import AnimateTop from '@/components/animations/AnimateTop'
+import Animate from '@/components/animations/Animate'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
@@ -52,7 +52,7 @@ export default function EmailForm() {
   const hasErrors = Boolean(emailError ?? subjectError ?? messageError)
 
   return (
-    <AnimateTop transition={{ delay: 0.3, duration: 0.5 }}>
+    <Animate delay={0.3}>
       <div className="mx-auto max-w-screen-md px-4 py-8 lg:py-16">
         {hasErrors && (
           <div
@@ -179,6 +179,6 @@ export default function EmailForm() {
           </div>
         </form>
       </div>
-    </AnimateTop>
+    </Animate>
   )
 }
