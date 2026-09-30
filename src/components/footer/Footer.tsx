@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
-import AnimateTop from '@/components/animations/AnimateTop'
+import Animate from '@/components/animations/Animate'
 import Address from '@/components/footer/Address'
 import Contacts from '@/components/footer/Contacts'
 import Intro from '@/components/footer/Intro'
@@ -12,29 +12,25 @@ export default function Footer() {
       <div className="max-w-c-1390 mx-auto px-4 md:px-8 2xl:px-0">
         <div className="py-10 lg:py-16">
           <div className="mb-10 flex flex-col justify-center gap-y-6 md:flex-row md:flex-wrap lg:grid lg:grid-cols-3 lg:gap-8">
-            <AnimateTop
-              className="mb-4 w-full lg:w-auto"
-              transition={{ delay: 0, duration: 0.4 }}
-            >
+            <Animate className="mb-4 w-full lg:w-auto" duration={0.4}>
               <Intro />
-            </AnimateTop>
-            <AnimateTop
+            </Animate>
+            <Animate
               className="w-full self-center md:w-1/2 lg:w-auto"
-              transition={{ delay: 0.05, duration: 0.4 }}
+              delay={0.05}
+              duration={0.4}
             >
               <Address />
-            </AnimateTop>
-            <AnimateTop
+            </Animate>
+            <Animate
               className="w-full md:w-1/2 lg:w-auto"
-              transition={{ delay: 0.1, duration: 0.4 }}
+              delay={0.1}
+              duration={0.4}
             >
               <Contacts />
-            </AnimateTop>
+            </Animate>
           </div>
-          <AnimateTop
-            className="w-full"
-            transition={{ delay: 0.15, duration: 0.4 }}
-          >
+          <Animate className="w-full" delay={0.15} duration={0.4}>
             <iframe
               allowFullScreen
               height="300px"
@@ -45,15 +41,15 @@ export default function Footer() {
               title="Localização do Centro Social da Freguesia de Casal Comba"
               width="100%"
             />
-          </AnimateTop>
+          </Animate>
         </div>
         <div className="border-stroke dark:border-strokedark flex flex-col flex-wrap items-center justify-center gap-4 border-t py-8 lg:flex-row lg:gap-0">
-          <AnimateTop transition={{ delay: 0.1, duration: 0.5 }}>
+          <Animate delay={0.1}>
             <p className="text-primary">
               &copy; {new Date().getFullYear()} CSFCC. Todos os direitos
               reservados.
             </p>
-          </AnimateTop>
+          </Animate>
         </div>
       </div>
     </footer>

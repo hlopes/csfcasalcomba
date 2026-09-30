@@ -1,8 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
-import AnimateLeft from '@/components/animations/AnimateLeft'
-import AnimateRight from '@/components/animations/AnimateRight'
+import Animate from '@/components/animations/Animate'
 import SectionWrapper from '@/components/section-wrapper/SectionWrapper'
 import { cn } from '@/lib/utils'
 import { Feature } from '@/types/Feature'
@@ -23,10 +22,7 @@ export default function Features({ data }: FeaturesProps) {
             )}
             key={id}
           >
-            <AnimateRight
-              className="lg:w-1/2"
-              transition={{ delay: 0.1, duration: 0.5 }}
-            >
+            <Animate className="lg:w-1/2" delay={0.1} direction="right">
               <h2 className="text-primary relative mb-6 text-2xl tracking-wide uppercase">
                 {title}
               </h2>
@@ -47,10 +43,11 @@ export default function Features({ data }: FeaturesProps) {
                   <path d="M10.4767 6.16701L6.00668 1.69701L7.18501 0.518677L13.6667 7.00034L7.18501 13.482L6.00668 12.3037L10.4767 7.83368H0.333344V6.16701H10.4767Z" />
                 </svg>
               </Link>
-            </AnimateRight>
-            <AnimateLeft
+            </Animate>
+            <Animate
               className="relative mx-auto aspect-[734/460] w-full lg:w-1/2"
-              transition={{ delay: 0.1, duration: 0.5 }}
+              delay={0.1}
+              direction="left"
             >
               <Image
                 alt={title}
@@ -60,7 +57,7 @@ export default function Features({ data }: FeaturesProps) {
                 sizes="(max-width: 1024px) 100vw, (max-width: 1390px) 50vw, 695px"
                 src={image}
               />
-            </AnimateLeft>
+            </Animate>
           </div>
         ))}
       </div>
