@@ -47,7 +47,7 @@ export default function DocsDialogs() {
                 <p className="py-4 text-sm">
                   Vimos por este meio informar V. Ex.a, que se encontram abertas
                   as inscrições para o Centro de Atividades de Tempos Livres,
-                  para o ano letivo 2024/2025, com a prestação de serviços ao
+                  para o ano letivo 2026/2027, com a prestação de serviços ao
                   nível do fornecimento de almoço, realização de atividades de
                   animação/ocupação dos tempos livres e transporte. Caso esteja
                   interessado em fazer a inscrição do seu Educando, deverá
@@ -171,7 +171,7 @@ export default function DocsDialogs() {
                 <p className="py-4 text-sm">
                   Vimos por este meio informar V. Ex.a, que se encontram abertas
                   as inscrições para o Centro de Atividades de Tempos Livres,
-                  para o ano letivo 2024/2025, com a prestação de serviços ao
+                  para o ano letivo 2026/2027, com a prestação de serviços ao
                   nível do fornecimento de almoço, realização de atividades de
                   animação/ocupação dos tempos livres e transporte. Caso esteja
                   interessado em renovar a inscrição do seu Educando, deverá
