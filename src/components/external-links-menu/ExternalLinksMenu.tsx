@@ -10,11 +10,13 @@ const links = [
   {
     href: 'https://www.facebook.com/csfcasalcomba/',
     icon: FacebookIcon,
+    iconClassName: 'text-primary',
     label: 'Facebook',
   },
   {
     href: 'https://www.livroreclamacoes.pt/',
     icon: BookOpen,
+    iconClassName: 'text-red-600',
     label: 'Livro de Reclamações',
   },
 ]
@@ -43,7 +45,7 @@ export default function ExternalLinksMenu() {
           transition={{ duration: 0.3, ease: 'easeOut' }}
         >
           <div className="flex flex-col items-end gap-3">
-            {links.map(({ href, icon: Icon, label }, i) => (
+            {links.map(({ href, icon: Icon, iconClassName, label }, i) => (
               <motion.a
                 key={label}
                 className="dark:bg-blacksection border-stroke bg-background flex items-center gap-2 rounded-lg border px-4 py-2.5 text-sm font-medium dark:border"
@@ -63,7 +65,7 @@ export default function ExternalLinksMenu() {
                   damping: 22,
                 }}
               >
-                <Icon className="text-primary h-4 w-4" />
+                <Icon className={`${iconClassName} h-4 w-4`} />
                 <span className="whitespace-nowrap">{label}</span>
               </motion.a>
             ))}

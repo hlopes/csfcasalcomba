@@ -27,7 +27,7 @@ export default function Tabs({ currentTab, data, onTabChange }: TabsProps) {
   return (
     <SectionWrapper sectionClassName="p-0">
       <Animate
-        className="border-stroke shadow-solid-5 dark:bg-blacksection dark:shadow-solid-6 bg-background -mx-8 mb-14 flex flex-wrap justify-center border md:flex-nowrap md:items-baseline lg:gap-8 xl:mb-22 xl:gap-12"
+        className="border-stroke shadow-solid-5 dark:bg-blacksection dark:shadow-solid-6 bg-background -mx-8 mb-14 flex flex-wrap justify-center border md:flex-nowrap md:items-baseline lg:gap-8 xl:mb-22 xl:gap-12 2xl:mx-0"
         delay={0.1}
       >
         <div
