@@ -33,7 +33,13 @@ const source = Source_Sans_3({
 
 export const metadata: Metadata = {
   description: 'Ao serviço da comunidade',
-  title: 'Centro Social da Freguesia de Casal Comba',
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL ?? 'https://www.csfcasalcomba.com'
+  ),
+  title: {
+    default: 'Centro Social da Freguesia de Casal Comba',
+    template: '%s | Centro Social da Freguesia de Casal Comba',
+  },
 }
 
 type RootLayoutProps = {

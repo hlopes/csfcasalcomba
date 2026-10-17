@@ -1,3 +1,5 @@
+import type { Metadata } from 'next'
+
 import BrandItem from '@/components/brands/BrandItem'
 import Brands from '@/components/brands/Brands'
 import HeroSecondary from '@/components/hero/HeroSecondary'
@@ -9,6 +11,12 @@ import {
   data as partnershipsData,
 } from '@/data/projectos-parcerias/brands-data'
 import { data as projectsData } from '@/data/projectos-parcerias/posts-data'
+
+export const metadata: Metadata = {
+  description:
+    'Conheça os projetos sociais desenvolvidos e as entidades parceiras do Centro Social da Freguesia de Casal Comba.',
+  title: 'Projetos e Parcerias',
+}
 
 export default function ProjectosParcerias() {
   return (

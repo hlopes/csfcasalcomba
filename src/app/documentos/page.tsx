@@ -1,3 +1,4 @@
+import type { Metadata } from 'next'
 import { Suspense } from 'react'
 
 import Accordion from '@/components/accordion/Accordion'
@@ -5,6 +6,12 @@ import HeroSecondary from '@/components/hero/HeroSecondary'
 import SectionHeader from '@/components/section-header/SectionHeader'
 import SectionWrapper from '@/components/section-wrapper/SectionWrapper'
 import { data } from '@/data/documentos/docs-data'
+
+export const metadata: Metadata = {
+  description:
+    'Consulte os principais documentos institucionais e de prestação de contas do Centro Social da Freguesia de Casal Comba.',
+  title: 'Documentos',
+}
 
 export default function Documentos() {
   return (
