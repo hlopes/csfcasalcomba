@@ -14,7 +14,28 @@ import { data as visionAndMissionData } from '@/data/instituicao/vision-mission-
 export const metadata: Metadata = {
   description:
     'Conheça a história, missão, visão, valores e órgãos sociais do Centro Social da Freguesia de Casal Comba.',
+  openGraph: {
+    description:
+      'Conheça a história, missão, visão, valores e órgãos sociais do Centro Social da Freguesia de Casal Comba.',
+    images: [
+      {
+        alt: 'Edifício do Centro Social da Freguesia de Casal Comba',
+        height: 1026,
+        url: '/images/home/facade.jpg',
+        width: 1942,
+      },
+    ],
+    title: 'A Instituição',
+    url: '/instituicao',
+  },
   title: 'A Instituição',
+  twitter: {
+    card: 'summary_large_image',
+    description:
+      'Conheça a história, missão, visão, valores e órgãos sociais do Centro Social da Freguesia de Casal Comba.',
+    images: ['/images/home/facade.jpg'],
+    title: 'A Instituição',
+  },
 }
 
 export default function Instituicao() {

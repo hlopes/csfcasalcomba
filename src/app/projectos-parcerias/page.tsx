@@ -15,7 +15,28 @@ import { data as projectsData } from '@/data/projectos-parcerias/posts-data'
 export const metadata: Metadata = {
   description:
     'Conheça os projetos sociais desenvolvidos e as entidades parceiras do Centro Social da Freguesia de Casal Comba.',
+  openGraph: {
+    description:
+      'Conheça os projetos sociais desenvolvidos e as entidades parceiras do Centro Social da Freguesia de Casal Comba.',
+    images: [
+      {
+        alt: 'Projetos e Parcerias do Centro Social da Freguesia de Casal Comba',
+        height: 1026,
+        url: '/images/home/facade.jpg',
+        width: 1942,
+      },
+    ],
+    title: 'Projetos e Parcerias',
+    url: '/projectos-parcerias',
+  },
   title: 'Projetos e Parcerias',
+  twitter: {
+    card: 'summary_large_image',
+    description:
+      'Conheça os projetos sociais desenvolvidos e as entidades parceiras do Centro Social da Freguesia de Casal Comba.',
+    images: ['/images/home/facade.jpg'],
+    title: 'Projetos e Parcerias',
+  },
 }
 
 export default function ProjectosParcerias() {

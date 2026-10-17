@@ -36,9 +36,36 @@ export const metadata: Metadata = {
   metadataBase: new URL(
     process.env.NEXT_PUBLIC_SITE_URL ?? 'https://www.csfcasalcomba.com'
   ),
+  openGraph: {
+    description: 'Ao serviço da comunidade',
+    images: [
+      {
+        alt: 'Edifício do Centro Social da Freguesia de Casal Comba',
+        height: 1026,
+        url: '/images/home/facade.jpg',
+        width: 1942,
+      },
+    ],
+    locale: 'pt_PT',
+    siteName: 'Centro Social da Freguesia de Casal Comba',
+    title: {
+      default: 'Centro Social da Freguesia de Casal Comba',
+      template: '%s | Centro Social da Freguesia de Casal Comba',
+    },
+    type: 'website',
+  },
   title: {
     default: 'Centro Social da Freguesia de Casal Comba',
     template: '%s | Centro Social da Freguesia de Casal Comba',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    description: 'Ao serviço da comunidade',
+    images: ['/images/home/facade.jpg'],
+    title: {
+      default: 'Centro Social da Freguesia de Casal Comba',
+      template: '%s | Centro Social da Freguesia de Casal Comba',
+    },
   },
 }
 
