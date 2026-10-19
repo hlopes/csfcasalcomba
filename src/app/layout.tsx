@@ -13,6 +13,7 @@ import { ReactNode } from 'react'
 import Footer from '@/components/footer/Footer'
 import Header from '@/components/header/Header'
 import ExternalLinksMenu from '@/components/external-links-menu/ExternalLinksMenu'
+import JsonLd from '@/components/json-ld/JsonLd'
 import ScrollToTop from '@/components/scroll-to-top/ScrollToTop'
 import { Toaster } from '@/components/ui/sonner'
 
@@ -80,6 +81,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
         className={`${display.variable} ${source.variable} antialiased`}
         id="scrollable"
       >
+        <JsonLd />
         <MotionConfig reducedMotion="user">
           <ThemeProvider
             attribute="class"
