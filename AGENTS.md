@@ -21,7 +21,8 @@ Instruction file for the **csfcasalcomba** repo — institutional website for "C
 - Contact form requires a local `.env.local` (`*.env*` is gitignored):
   - `RESEND_API_KEY` - Resend API key (https://resend.com)
   - `RESEND_TO` - Recipient address for the contact form
-- Server action (`src/lib/mail.ts`) reads both vars at runtime and hardcodes sender `csfcasalcomba@resend.dev`. Build succeeds without them; only the form fails at send time.
+  - `RESEND_FROM` - Optional sender in `"Name <email>"` format; falls back to the Resend sandbox address when unset. Verify a production domain in Resend before using it.
+- Server action (`src/lib/mail.ts`) reads vars at runtime and defends against bots with a honeypot (`website` field) plus in-memory per-IP rate limiting (3 requests/minute). Build succeeds without them; only the form fails at send time.
 - Deployed on Vercel (`@vercel/analytics` + `@vercel/speed-insights` mounted in the root layout).
 
 ## Styling (Tailwind v4 — CSS-first)
