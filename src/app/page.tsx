@@ -1,7 +1,35 @@
+import type { Metadata } from 'next'
+
 import Callout from '@/components/callout/Callout'
 import Features from '@/components/features/Features'
 import HeroPrimary from '@/components/hero/HeroPrimary'
 import { featuresData } from '@/data/home/features-data'
+
+export const metadata: Metadata = {
+  description:
+    'Centro Social da Freguesia de Casal Comba — Instituição Particular de Solidariedade Social (IPSS) ao serviço da comunidade, com respostas para infância e terceira idade.',
+  openGraph: {
+    description:
+      'Centro Social da Freguesia de Casal Comba — Instituição Particular de Solidariedade Social (IPSS) ao serviço da comunidade, com respostas para infância e terceira idade.',
+    images: [
+      {
+        alt: 'Centro Social da Freguesia de Casal Comba',
+        height: 1026,
+        url: '/images/home/facade.jpg',
+        width: 1942,
+      },
+    ],
+    title: 'Centro Social da Freguesia de Casal Comba',
+    url: '/',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    description:
+      'Centro Social da Freguesia de Casal Comba — Instituição Particular de Solidariedade Social (IPSS) ao serviço da comunidade, com respostas para infância e terceira idade.',
+    images: ['/images/home/facade.jpg'],
+    title: 'Centro Social da Freguesia de Casal Comba',
+  },
+}
 
 export default function Home() {
   return (

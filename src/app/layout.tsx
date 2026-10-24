@@ -13,6 +13,7 @@ import { ReactNode } from 'react'
 import Footer from '@/components/footer/Footer'
 import Header from '@/components/header/Header'
 import ExternalLinksMenu from '@/components/external-links-menu/ExternalLinksMenu'
+import JsonLd from '@/components/json-ld/JsonLd'
 import ScrollToTop from '@/components/scroll-to-top/ScrollToTop'
 import { Toaster } from '@/components/ui/sonner'
 
@@ -33,7 +34,40 @@ const source = Source_Sans_3({
 
 export const metadata: Metadata = {
   description: 'Ao serviço da comunidade',
-  title: 'Centro Social da Freguesia de Casal Comba',
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL ?? 'https://www.csfcasalcomba.com'
+  ),
+  openGraph: {
+    description: 'Ao serviço da comunidade',
+    images: [
+      {
+        alt: 'Edifício do Centro Social da Freguesia de Casal Comba',
+        height: 1026,
+        url: '/images/home/facade.jpg',
+        width: 1942,
+      },
+    ],
+    locale: 'pt_PT',
+    siteName: 'Centro Social da Freguesia de Casal Comba',
+    title: {
+      default: 'Centro Social da Freguesia de Casal Comba',
+      template: '%s | Centro Social da Freguesia de Casal Comba',
+    },
+    type: 'website',
+  },
+  title: {
+    default: 'Centro Social da Freguesia de Casal Comba',
+    template: '%s | Centro Social da Freguesia de Casal Comba',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    description: 'Ao serviço da comunidade',
+    images: ['/images/home/facade.jpg'],
+    title: {
+      default: 'Centro Social da Freguesia de Casal Comba',
+      template: '%s | Centro Social da Freguesia de Casal Comba',
+    },
+  },
 }
 
 type RootLayoutProps = {
@@ -47,6 +81,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
         className={`${display.variable} ${source.variable} antialiased`}
         id="scrollable"
       >
+        <JsonLd />
         <MotionConfig reducedMotion="user">
           <ThemeProvider
             attribute="class"

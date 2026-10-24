@@ -1,3 +1,5 @@
+import type { Metadata } from 'next'
+
 import Boards from '@/components/boards/Boards'
 import Cards from '@/components/cards/Cards'
 import HeroSecondary from '@/components/hero/HeroSecondary'
@@ -8,6 +10,33 @@ import { data as boardsData } from '@/data/instituicao/boards-data'
 import { data as cardsData } from '@/data/instituicao/cards-data'
 import { data as valuesData } from '@/data/instituicao/values-data'
 import { data as visionAndMissionData } from '@/data/instituicao/vision-mission-data'
+
+export const metadata: Metadata = {
+  description:
+    'Conheça a história, missão, visão, valores e órgãos sociais do Centro Social da Freguesia de Casal Comba.',
+  openGraph: {
+    description:
+      'Conheça a história, missão, visão, valores e órgãos sociais do Centro Social da Freguesia de Casal Comba.',
+    images: [
+      {
+        alt: 'Edifício do Centro Social da Freguesia de Casal Comba',
+        height: 1026,
+        url: '/images/home/facade.jpg',
+        width: 1942,
+      },
+    ],
+    title: 'A Instituição',
+    url: '/instituicao',
+  },
+  title: 'A Instituição',
+  twitter: {
+    card: 'summary_large_image',
+    description:
+      'Conheça a história, missão, visão, valores e órgãos sociais do Centro Social da Freguesia de Casal Comba.',
+    images: ['/images/home/facade.jpg'],
+    title: 'A Instituição',
+  },
+}
 
 export default function Instituicao() {
   return (
