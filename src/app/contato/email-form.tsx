@@ -35,7 +35,11 @@ export default function EmailForm() {
       if (result?.errors) {
         setErrors(result.errors as FieldErrors)
       }
-      toast.error('Uh oh! Ocorreu um erro inesperado.')
+      if (result?.error?.name === 'rate_limit') {
+        toast.error(result.error.message)
+      } else {
+        toast.error('Uh oh! Ocorreu um erro inesperado.')
+      }
       summaryRef.current?.focus()
 
       return
@@ -90,7 +94,20 @@ export default function EmailForm() {
             </ul>
           </div>
         )}
-        <form action={send} className="space-y-8" ref={formRef}>
+        <form action={send} className="relative space-y-8" ref={formRef}>
+          {/* Honeypot: off-screen field that bots fill out, humans never see */}
+          <div
+            aria-hidden="true"
+            className="absolute start-[-10000px] size-0 overflow-hidden"
+          >
+            <Input
+              autoComplete="off"
+              id="website"
+              name="website"
+              tabIndex={-1}
+              type="text"
+            />
+          </div>
           <div className="space-y-2">
             <Label htmlFor="email">
               Email <span aria-hidden="true">*</span>
