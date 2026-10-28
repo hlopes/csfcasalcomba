@@ -74,10 +74,7 @@ export const sendEmail = async (formData: FormData) => {
       from: validatedFields.data.email,
     }),
     subject: validatedFields.data.subject,
-    to: (process.env.RESEND_TO ?? '')
-      .split(',')
-      .map((email) => email.trim())
-      .filter(Boolean),
+    to: [`${process.env.RESEND_TO}`],
   })
 
   return { data, error }
