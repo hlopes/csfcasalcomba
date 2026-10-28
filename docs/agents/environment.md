@@ -5,7 +5,7 @@
 The contact form needs a local `.env.local` (gitignored via `*.env*`):
 
 - `RESEND_API_KEY` — Resend API key (https://resend.com)
-- `RESEND_TO` — recipient address for the contact form
+- `RESEND_TO` — recipient address, or a comma-separated list of recipients
 - `RESEND_FROM` — optional sender in `"Name <email>"` format; falls back to the Resend sandbox address when unset. Verify a production domain in Resend before using it.
 
 The build succeeds without these variables; only sending fails at runtime.
