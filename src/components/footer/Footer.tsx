@@ -1,6 +1,3 @@
-import Image from 'next/image'
-import Link from 'next/link'
-
 import Animate from '@/components/animations/Animate'
 import Address from '@/components/footer/Address'
 import Contacts from '@/components/footer/Contacts'
