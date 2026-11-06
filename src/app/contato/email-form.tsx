@@ -1,6 +1,6 @@
 'use client'
 
-import { useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { toast } from 'sonner'
 
 import Animate from '@/components/animations/Animate'
@@ -40,7 +40,6 @@ export default function EmailForm() {
       } else {
         toast.error('Uh oh! Ocorreu um erro inesperado.')
       }
-      summaryRef.current?.focus()
 
       return
     }
@@ -54,6 +53,12 @@ export default function EmailForm() {
   const subjectError = errors?.subject?.[0]
   const messageError = errors?.message?.[0]
   const hasErrors = Boolean(emailError ?? subjectError ?? messageError)
+
+  useEffect(() => {
+    if (hasErrors) {
+      summaryRef.current?.focus()
+    }
+  }, [errors, hasErrors])
 
   return (
     <Animate delay={0.3}>
