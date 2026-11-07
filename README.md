@@ -93,14 +93,13 @@ csfcasalcomba/
 ├── .next/                # Next.js build output
 ├── public/               # Static assets
 ├── src/
-│   ├── app/              # Next.js App Router pages
-│   ├── components/       # Reusable components
+│   ├── app/              # Next.js App Router pages, layouts and global styles
+│   ├── components/       # Reusable components, one folder per type
 │   │   ├── mail-template/ # React Email templates
-│   │   ├── providers/    # React Context providers
-│   │   ├── shared/       # Shared components
-│   │   └── ui/           # UI components (e.g., buttons, inputs)
+│   │   └── ui/           # UI primitives (e.g., buttons, inputs)
+│   ├── data/             # Structured site content
+│   ├── helper/           # Server-side helpers (e.g., rate limiting)
 │   ├── lib/              # Library functions and utilities
-│   ├── styles/           # Global styles
 │   └── types/            # TypeScript type definitions
 ├── package-lock.json     # npm lockfile
 ├── components.json       # Shadcn UI components configuration
@@ -119,16 +118,17 @@ csfcasalcomba/
 This project utilizes the Next.js App Router, which enables a file-system-based routing mechanism and allows for the easy creation of layouts, pages, and components. The architecture is designed to be modular and scalable, with a clear separation of concerns.
 
 - **`src/app`**: Contains all the routes and pages of the application.
-- **`src/components`**: Home to all reusable components, categorized into `shared`, `ui`, `providers`, and `mail-template`.
+- **`src/components`**: Home to all reusable components, one folder per component type, alongside the `ui` primitives and `mail-template` email templates.
+- **`src/data`**: Structured content used by the pages.
+- **`src/helper`**: Server-side helpers, such as rate limiting.
 - **`src/lib`**: Includes utility functions, API clients, and other library code.
 
 ## 🎨 Styling
 
-Styling is handled with Tailwind CSS, a utility-first CSS framework. We use `clsx` to conditionally apply classes and `tailwind-merge` to resolve conflicting classes.
+Styling is handled with Tailwind CSS 4, a utility-first CSS framework configured CSS-first (there is no `tailwind.config.js`). We use `clsx` to conditionally apply classes and `tailwind-merge` to resolve conflicting classes.
 
-- **`tailwind.config.js`**: The configuration file for Tailwind CSS.
+- **`src/app/globals.css`**: Global styles, Tailwind CSS directives, and theme tokens (`@theme inline`, light/dark variables).
 - **`postcss.config.mjs`**: The configuration file for PostCSS.
-- **`src/styles/globals.css`**: Global styles and Tailwind CSS directives.
 
 ## 📧 Email
 

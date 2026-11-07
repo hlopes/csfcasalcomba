@@ -18,7 +18,8 @@ import { menuData } from '@/data/menu-data'
 import { cn } from '@/lib/utils'
 
 export default function Header() {
-  const containerRef = useRef(null)
+  // `null!` works around usehooks-ts typing refs as non-nullable.
+  const containerRef = useRef<HTMLElement>(null!)
 
   const [navigationOpen, setNavigationOpen] = useState(false)
 
@@ -42,7 +43,6 @@ export default function Header() {
     unlock()
   }, [unlock, setNavigationOpen])
 
-  // @ts-expect-error it will never be null
   useOnClickOutside(containerRef, () => {
     if (containerRef.current) {
       closeMenu()
