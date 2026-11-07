@@ -33,11 +33,11 @@ jobs:
       - name: Type-check
         run: npm run typecheck
 
-      - name: Build
-        run: npm run build
-
       - name: Unit tests
         run: npm run test
+
+      - name: Build
+        run: npm run build
 
   e2e:
     name: Playwright smoke tests

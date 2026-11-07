@@ -6,4 +6,4 @@ Commitlint is enforced by the `commit-msg` hook (`./node_modules/.bin/commitlint
 
 ## Verification
 
-No CI workflows exist beyond `dependabot.yml` — the commit-msg hook is the only automated check. Whatever you verify, you verify locally: `npm run lint` followed by `npm run build`.
+CI (`.github/workflows/ci.yml`) runs on every pull request and on pushes to `main`: a `quality` job runs `npm run lint`, `npm run typecheck`, `npm run test` and `npm run build`; an `e2e` job runs `npm run test:e2e`. Reproduce the quality gate locally in the same order. See [testing.md](./testing.md) for the test suites.
