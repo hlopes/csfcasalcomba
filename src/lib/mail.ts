@@ -2,22 +2,10 @@
 
 import { headers } from 'next/headers'
 import { Resend } from 'resend'
-import { z } from 'zod'
 
 import MailTemplate from '@/components/mail-template/MailTemplate'
 import { checkRateLimit } from '@/helper/rate-limiter'
-
-const schema = z.object({
-  email: z.email({
-    error: 'Email inválido',
-  }),
-  message: z.string({
-    error: 'Mensagem inválida',
-  }),
-  subject: z.string({
-    error: 'Assunto inválido',
-  }),
-})
+import { contactSchema } from '@/lib/contact-schema'
 
 // ---------------------------------------------------------------------------
 // Server action
@@ -48,7 +36,7 @@ export const sendEmail = async (formData: FormData) => {
     }
   }
 
-  const validatedFields = schema.safeParse({
+  const validatedFields = contactSchema.safeParse({
     email: formData.get('email'),
     message: formData.get('message'),
     subject: formData.get('subject'),

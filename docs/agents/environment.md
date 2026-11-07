@@ -12,7 +12,7 @@ The build succeeds without these variables; only sending fails at runtime.
 
 ## Mail implementation
 
-- `src/lib/mail.ts` is the `'use server'` form action: zod-validated, delivered via Resend.
+- `src/lib/mail.ts` is the `'use server'` form action: zod-validated, delivered via Resend. The zod schema lives in `src/lib/contact-schema.ts` so it can be unit-tested.
 - Bot defense: honeypot field (`website`) plus in-memory per-IP rate limiting (3 requests/minute).
 - Email templates live in `src/components/mail-template/`; preview them with `npm run email:dev` at http://localhost:4000.
 

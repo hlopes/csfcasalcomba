@@ -25,6 +25,8 @@ The website is organized into the following main sections:
 - **TypeScript**: Strongly typed programming language that builds on JavaScript, giving you better tooling at any scale.
 - **Tailwind CSS 4**: A utility-first CSS framework for rapid UI development.
 - **ESLint and Prettier**: For consistent code style and quality.
+- **Vitest and React Testing Library**: For unit and integration tests of interactive components.
+- **Playwright**: For end-to-end smoke tests of the primary routes.
 - **Husky and commitlint**: To enforce conventional commit messages.
 - **React Email and Resend**: For building and sending beautiful emails with React.
 
@@ -75,6 +77,10 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 - `npm run build`: Builds the application for production.
 - `npm run start`: Starts a production server.
 - `npm run lint`: Lints the codebase for errors.
+- `npm run typecheck`: Runs the TypeScript compiler without emitting files.
+- `npm run test`: Runs the Vitest unit and integration tests.
+- `npm run test:watch`: Runs Vitest in watch mode.
+- `npm run test:e2e`: Builds the app and runs the Playwright smoke tests.
 - `npm run format`: Formats the code with Prettier.
 - `npm run email:dev`: Starts the React Email development server.
 
