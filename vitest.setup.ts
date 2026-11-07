@@ -12,6 +12,9 @@ if (!('ResizeObserver' in globalThis)) {
   }
 }
 
+// jsdom throws "Not implemented" when user-event scrolls an element into view.
+Object.defineProperty(window, 'scrollTo', { value: () => {}, writable: true })
+
 afterEach(() => {
   cleanup()
 })

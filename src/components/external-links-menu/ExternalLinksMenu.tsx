@@ -22,12 +22,20 @@ const links = [
 ]
 
 export default function ExternalLinksMenu() {
-  const [open, setOpen] = useState(false)
+  const [hovered, setHovered] = useState(false)
+  const [pinned, setPinned] = useState(false)
+  const open = hovered || pinned
+
+  const close = () => {
+    setHovered(false)
+    setPinned(false)
+  }
 
   useEffect(() => {
     const onKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Escape') {
-        setOpen(false)
+        setHovered(false)
+        setPinned(false)
       }
     }
     window.addEventListener('keydown', onKeyDown)
@@ -37,10 +45,14 @@ export default function ExternalLinksMenu() {
 
   return (
     <div className="fixed top-1/2 right-0 z-50 -translate-y-1/2">
-      <motion.div className="relative">
+      <motion.div
+        className="relative"
+        onMouseEnter={() => setHovered(true)}
+        onMouseLeave={() => setHovered(false)}
+      >
         <motion.div
           animate={{ height: open ? 'auto' : 0, opacity: open ? 1 : 0 }}
-          className="absolute right-0 bottom-full mb-3 overflow-hidden"
+          className="absolute right-0 bottom-full overflow-hidden pb-3"
           initial={false}
           transition={{ duration: 0.3, ease: 'easeOut' }}
         >
@@ -75,7 +87,13 @@ export default function ExternalLinksMenu() {
           aria-expanded={open}
           aria-label="Links externos"
           className="bg-primary flex h-12 w-12 cursor-pointer items-center justify-center text-white shadow-lg"
-          onClick={() => setOpen((v) => !v)}
+          onClick={() => {
+            if (pinned) {
+              close()
+            } else {
+              setPinned(true)
+            }
+          }}
           whileHover={{ scale: 1.06 }}
           whileTap={{ scale: 0.94 }}
         >
