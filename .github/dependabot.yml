@@ -17,6 +17,12 @@ updates:
     commit-message:
       prefix: 'chore'
       include: 'scope'
+    # TypeScript 7 is the native rewrite and is not yet supported by the
+    # typescript-eslint version bundled in eslint-config-next, which crashes.
+    ignore:
+      - dependency-name: 'typescript'
+        update-types:
+          - 'version-update:semver-major'
     # Group dependencies updates together
     groups:
       dependencies:
